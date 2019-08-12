@@ -1,0 +1,9 @@
+{
+    "queryStringParameters" : {
+        "startEpoch":"1562590800000",
+        "endEpoch": "1562644740000"
+        "tdids": "2256,2258,2260,2261,2262",
+        "granularity": "daily"
+        "usedecimals": "true"   
+    }   
+}

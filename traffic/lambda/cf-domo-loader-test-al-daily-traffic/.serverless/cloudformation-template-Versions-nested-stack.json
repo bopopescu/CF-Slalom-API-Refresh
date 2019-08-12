@@ -1,0 +1,694 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "VersionsNestedStack nested stack",
+  "Parameters": {
+    "TransformLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "LoadLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ExtractLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashtrafficLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashmonthlyDashtrafficLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashdwellLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashfrequencyLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashvisitorDashflowLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashcrossvisitorLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashsocialwifiLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "GfDashgiftcardDashtransactionLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "GfDashgiftcardDashinfoLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashctiDashcategoryLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashctiDashprojectLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashctiDashspaceLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashctiDashstoreLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashctiDashtenantLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashctiDashunitLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "ScheduleDashsalesDashrcisDashcategoryLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashctiDashcategoryLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashctiDashprojectLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashctiDashspaceLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashctiDashstoreLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashctiDashtenantLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashctiDashunitLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "BackfillDashsalesDashrcisDashcategoryLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "MerakiDashdevicesLambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "MerakiDashdevicesDashstatusLambdaFunctionParameter": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "TransformLambdaVersionBFdPZLR9G38pZpZtcfizkztbmN1VhvFkQCRSmLWDKw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "TransformLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "LoadLambdaVersionvP9edj3ILJgti7k89GeagoCBAabq0j1i7noElVRtQZ0": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "LoadLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ExtractLambdaVersionymUCCGGwTfqfZ4N44Due6e65mIKlvmjIzLrOEr1g": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ExtractLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficLambdaVersionKzzzhRpntE4dmkqCwT6plFDC3BTLcXwrEOBgvpIRIPU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaVersion9cs06voJe7r0UDm9PrTR5Q4HLEhRauZdP16X0zGKU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaVersiondt4O2uRmb5i5dXgaWrcxgRCZ8YtPbA8bdZ1s9MVz7g": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaVersionGHcCLGewvkaqVRWuPD71bspCSXkH8Fag019cHbtysto": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaVersionnjCzvoIRSgX9xuGP1QddxGXi8XmmxeFmCG9ZjL8xy3w": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashmonthlyDashtrafficLambdaVersionnCfFJl08LAltGbHiYT5Rx6tiFS4zWiaTnsKpcuwvqY": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashmonthlyDashtrafficLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellLambdaVersionk6H8RqS5H240mMpJ51FCpFsbNd3X3CO6pGCxhuzfPj4": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaVersionkRGUs2WjLFL0KWSCNvECP8zK6IDYTBJ0p3UwZHCgDDY": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaVersionMGCGQLGjPPvqJoypBBf1t9j6aa1h2UdIklG9nylhw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaVersionitvFC1Pk3yZuhWw9U2WYeBzfv2f1q5cujehy62k": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaVersionyVlbT9PVKl0DsKAgFft6pGSVqnGUT0u5Xc5CoROLgu4": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashfrequencyLambdaVersionMxUJDWssTjBGs7m9F6x2A3swXSoDyQhoww118JpOQs": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashfrequencyLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashvisitorDashflowLambdaVersionibv2VI58bXjoVqJrrbcdB3cpQFqkSzmaFDcQwCQchk": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashvisitorDashflowLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashcrossvisitorLambdaVersion3gTOVpndAmGeDGlM80uQoRg7L8fNEqHfbrtgvnQoU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashcrossvisitorLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "AlDashsocialwifiLambdaVersionm5OAWRfRRC0bcKJXLLMItaZhv5kfj3oLzmyhTiPS4ac": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashsocialwifiLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "GfDashgiftcardDashtransactionLambdaVersionsdNG8VpYyXrl3SHzRthR0wW479CNkbUYHyC1K8MNE": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GfDashgiftcardDashtransactionLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "GfDashgiftcardDashinfoLambdaVersion1Te9f4f5ELA6x3ow9CLq7mWZV1ttjHl5rOcxIzkjM": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GfDashgiftcardDashinfoLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashctiDashcategoryLambdaVersionxPvmy9WZpUkkGMVfWdKGhRyWZmpno9YfZdgOI3K50bI": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashctiDashcategoryLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashctiDashprojectLambdaVersionPzJ3pXdUJWIM6jG0fuLZktug3g9kdtAP8cnhhNJt6E": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashctiDashprojectLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashctiDashspaceLambdaVersionpzniyuLOagmqJ5luF1XbgVGxS69EmxoUs3NG55T9s": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashctiDashspaceLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashctiDashstoreLambdaVersionD0URjBaoN4VvapOkq5CAT08Lgq08ekPrmoT52489AE": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashctiDashstoreLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashctiDashtenantLambdaVersionYGbwZz1LON5BJS6O2oxYxWqzzJdwsQnTBqRID5FNQ": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashctiDashtenantLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashctiDashunitLambdaVersionDPI54T0LEn14HQncN2IJll9Sl6jbtcsjzEGsxTfts": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashctiDashunitLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "ScheduleDashsalesDashrcisDashcategoryLambdaVersionJpINn9Cor4Jk2CT4PRINj1rAxYxibKJyQ2pA8UbQ": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "ScheduleDashsalesDashrcisDashcategoryLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashctiDashcategoryLambdaVersion7dGegnP6OUBuWxKuUvdkpq9DYB3gv5wbc1baI6CKtxU": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashctiDashcategoryLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashctiDashprojectLambdaVersionqHh04KqJEJrbNnkfX9kPbtkPayc3sIsdfgR04M3qyw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashctiDashprojectLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashctiDashspaceLambdaVersionX4FOjaV1v4sgMJejXaTYvLbD2rP55UcK7pqjtvjc": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashctiDashspaceLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashctiDashstoreLambdaVersionAW8gveum3Sq5KwO0T5nsH24zMjxrn2ycvBMZuTB40": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashctiDashstoreLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashctiDashtenantLambdaVersioncrvxEDfZm9DdVSOI549Qk0oGJ0rYEqYIZ0IlXANhGdo": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashctiDashtenantLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashctiDashunitLambdaVersionlbGERySaRtaEeuOaoOmIrrZuxRHTC6C2fpYg9HG8": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashctiDashunitLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "BackfillDashsalesDashrcisDashcategoryLambdaVersions4H1qJupcHYQ0dUOaLv0tqYV3MauSiDtp4nH3lA": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "BackfillDashsalesDashrcisDashcategoryLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "MerakiDashdevicesLambdaVersioniQKK9fys7WnrjbKWwGP4aikDiVdEnmelOeYArCOJZtM": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "MerakiDashdevicesLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    },
+    "MerakiDashdevicesDashstatusLambdaVersionkLmuRuqAWQ1HiBJWULJ0tRDcCM9XSwBHLkakqwCboo": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "MerakiDashdevicesDashstatusLambdaFunctionParameter"
+        },
+        "CodeSha256": "C4WMeXTZCeIY70cec0zf9JCN0TCZTUl4wJUo9bD9OqM="
+      },
+      "DependsOn": []
+    }
+  },
+  "Outputs": {
+    "MerakiDashdevicesDashstatusLambdaVersionkLmuRuqAWQ1HiBJWULJ0tRDcCM9XSwBHLkakqwCboo": {
+      "Value": {
+        "Ref": "MerakiDashdevicesDashstatusLambdaVersionkLmuRuqAWQ1HiBJWULJ0tRDcCM9XSwBHLkakqwCboo"
+      }
+    },
+    "MerakiDashdevicesLambdaVersioniQKK9fys7WnrjbKWwGP4aikDiVdEnmelOeYArCOJZtM": {
+      "Value": {
+        "Ref": "MerakiDashdevicesLambdaVersioniQKK9fys7WnrjbKWwGP4aikDiVdEnmelOeYArCOJZtM"
+      }
+    },
+    "BackfillDashsalesDashrcisDashcategoryLambdaVersions4H1qJupcHYQ0dUOaLv0tqYV3MauSiDtp4nH3lA": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashrcisDashcategoryLambdaVersions4H1qJupcHYQ0dUOaLv0tqYV3MauSiDtp4nH3lA"
+      }
+    },
+    "BackfillDashsalesDashctiDashunitLambdaVersionlbGERySaRtaEeuOaoOmIrrZuxRHTC6C2fpYg9HG8": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashctiDashunitLambdaVersionlbGERySaRtaEeuOaoOmIrrZuxRHTC6C2fpYg9HG8"
+      }
+    },
+    "BackfillDashsalesDashctiDashtenantLambdaVersioncrvxEDfZm9DdVSOI549Qk0oGJ0rYEqYIZ0IlXANhGdo": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashctiDashtenantLambdaVersioncrvxEDfZm9DdVSOI549Qk0oGJ0rYEqYIZ0IlXANhGdo"
+      }
+    },
+    "BackfillDashsalesDashctiDashstoreLambdaVersionAW8gveum3Sq5KwO0T5nsH24zMjxrn2ycvBMZuTB40": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashctiDashstoreLambdaVersionAW8gveum3Sq5KwO0T5nsH24zMjxrn2ycvBMZuTB40"
+      }
+    },
+    "BackfillDashsalesDashctiDashspaceLambdaVersionX4FOjaV1v4sgMJejXaTYvLbD2rP55UcK7pqjtvjc": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashctiDashspaceLambdaVersionX4FOjaV1v4sgMJejXaTYvLbD2rP55UcK7pqjtvjc"
+      }
+    },
+    "BackfillDashsalesDashctiDashprojectLambdaVersionqHh04KqJEJrbNnkfX9kPbtkPayc3sIsdfgR04M3qyw": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashctiDashprojectLambdaVersionqHh04KqJEJrbNnkfX9kPbtkPayc3sIsdfgR04M3qyw"
+      }
+    },
+    "BackfillDashsalesDashctiDashcategoryLambdaVersion7dGegnP6OUBuWxKuUvdkpq9DYB3gv5wbc1baI6CKtxU": {
+      "Value": {
+        "Ref": "BackfillDashsalesDashctiDashcategoryLambdaVersion7dGegnP6OUBuWxKuUvdkpq9DYB3gv5wbc1baI6CKtxU"
+      }
+    },
+    "ScheduleDashsalesDashrcisDashcategoryLambdaVersionJpINn9Cor4Jk2CT4PRINj1rAxYxibKJyQ2pA8UbQ": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashrcisDashcategoryLambdaVersionJpINn9Cor4Jk2CT4PRINj1rAxYxibKJyQ2pA8UbQ"
+      }
+    },
+    "ScheduleDashsalesDashctiDashunitLambdaVersionDPI54T0LEn14HQncN2IJll9Sl6jbtcsjzEGsxTfts": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashctiDashunitLambdaVersionDPI54T0LEn14HQncN2IJll9Sl6jbtcsjzEGsxTfts"
+      }
+    },
+    "ScheduleDashsalesDashctiDashtenantLambdaVersionYGbwZz1LON5BJS6O2oxYxWqzzJdwsQnTBqRID5FNQ": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashctiDashtenantLambdaVersionYGbwZz1LON5BJS6O2oxYxWqzzJdwsQnTBqRID5FNQ"
+      }
+    },
+    "ScheduleDashsalesDashctiDashstoreLambdaVersionD0URjBaoN4VvapOkq5CAT08Lgq08ekPrmoT52489AE": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashctiDashstoreLambdaVersionD0URjBaoN4VvapOkq5CAT08Lgq08ekPrmoT52489AE"
+      }
+    },
+    "ScheduleDashsalesDashctiDashspaceLambdaVersionpzniyuLOagmqJ5luF1XbgVGxS69EmxoUs3NG55T9s": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashctiDashspaceLambdaVersionpzniyuLOagmqJ5luF1XbgVGxS69EmxoUs3NG55T9s"
+      }
+    },
+    "ScheduleDashsalesDashctiDashprojectLambdaVersionPzJ3pXdUJWIM6jG0fuLZktug3g9kdtAP8cnhhNJt6E": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashctiDashprojectLambdaVersionPzJ3pXdUJWIM6jG0fuLZktug3g9kdtAP8cnhhNJt6E"
+      }
+    },
+    "ScheduleDashsalesDashctiDashcategoryLambdaVersionxPvmy9WZpUkkGMVfWdKGhRyWZmpno9YfZdgOI3K50bI": {
+      "Value": {
+        "Ref": "ScheduleDashsalesDashctiDashcategoryLambdaVersionxPvmy9WZpUkkGMVfWdKGhRyWZmpno9YfZdgOI3K50bI"
+      }
+    },
+    "GfDashgiftcardDashinfoLambdaVersion1Te9f4f5ELA6x3ow9CLq7mWZV1ttjHl5rOcxIzkjM": {
+      "Value": {
+        "Ref": "GfDashgiftcardDashinfoLambdaVersion1Te9f4f5ELA6x3ow9CLq7mWZV1ttjHl5rOcxIzkjM"
+      }
+    },
+    "GfDashgiftcardDashtransactionLambdaVersionsdNG8VpYyXrl3SHzRthR0wW479CNkbUYHyC1K8MNE": {
+      "Value": {
+        "Ref": "GfDashgiftcardDashtransactionLambdaVersionsdNG8VpYyXrl3SHzRthR0wW479CNkbUYHyC1K8MNE"
+      }
+    },
+    "AlDashsocialwifiLambdaVersionm5OAWRfRRC0bcKJXLLMItaZhv5kfj3oLzmyhTiPS4ac": {
+      "Value": {
+        "Ref": "AlDashsocialwifiLambdaVersionm5OAWRfRRC0bcKJXLLMItaZhv5kfj3oLzmyhTiPS4ac"
+      }
+    },
+    "AlDashcrossvisitorLambdaVersion3gTOVpndAmGeDGlM80uQoRg7L8fNEqHfbrtgvnQoU": {
+      "Value": {
+        "Ref": "AlDashcrossvisitorLambdaVersion3gTOVpndAmGeDGlM80uQoRg7L8fNEqHfbrtgvnQoU"
+      }
+    },
+    "AlDashvisitorDashflowLambdaVersionibv2VI58bXjoVqJrrbcdB3cpQFqkSzmaFDcQwCQchk": {
+      "Value": {
+        "Ref": "AlDashvisitorDashflowLambdaVersionibv2VI58bXjoVqJrrbcdB3cpQFqkSzmaFDcQwCQchk"
+      }
+    },
+    "AlDashfrequencyLambdaVersionMxUJDWssTjBGs7m9F6x2A3swXSoDyQhoww118JpOQs": {
+      "Value": {
+        "Ref": "AlDashfrequencyLambdaVersionMxUJDWssTjBGs7m9F6x2A3swXSoDyQhoww118JpOQs"
+      }
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaVersionyVlbT9PVKl0DsKAgFft6pGSVqnGUT0u5Xc5CoROLgu4": {
+      "Value": {
+        "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaVersionyVlbT9PVKl0DsKAgFft6pGSVqnGUT0u5Xc5CoROLgu4"
+      }
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaVersionitvFC1Pk3yZuhWw9U2WYeBzfv2f1q5cujehy62k": {
+      "Value": {
+        "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaVersionitvFC1Pk3yZuhWw9U2WYeBzfv2f1q5cujehy62k"
+      }
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaVersionMGCGQLGjPPvqJoypBBf1t9j6aa1h2UdIklG9nylhw": {
+      "Value": {
+        "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaVersionMGCGQLGjPPvqJoypBBf1t9j6aa1h2UdIklG9nylhw"
+      }
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaVersionkRGUs2WjLFL0KWSCNvECP8zK6IDYTBJ0p3UwZHCgDDY": {
+      "Value": {
+        "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaVersionkRGUs2WjLFL0KWSCNvECP8zK6IDYTBJ0p3UwZHCgDDY"
+      }
+    },
+    "AlDashdailyDashdwellLambdaVersionk6H8RqS5H240mMpJ51FCpFsbNd3X3CO6pGCxhuzfPj4": {
+      "Value": {
+        "Ref": "AlDashdailyDashdwellLambdaVersionk6H8RqS5H240mMpJ51FCpFsbNd3X3CO6pGCxhuzfPj4"
+      }
+    },
+    "AlDashmonthlyDashtrafficLambdaVersionnCfFJl08LAltGbHiYT5Rx6tiFS4zWiaTnsKpcuwvqY": {
+      "Value": {
+        "Ref": "AlDashmonthlyDashtrafficLambdaVersionnCfFJl08LAltGbHiYT5Rx6tiFS4zWiaTnsKpcuwvqY"
+      }
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaVersionnjCzvoIRSgX9xuGP1QddxGXi8XmmxeFmCG9ZjL8xy3w": {
+      "Value": {
+        "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaVersionnjCzvoIRSgX9xuGP1QddxGXi8XmmxeFmCG9ZjL8xy3w"
+      }
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaVersionGHcCLGewvkaqVRWuPD71bspCSXkH8Fag019cHbtysto": {
+      "Value": {
+        "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaVersionGHcCLGewvkaqVRWuPD71bspCSXkH8Fag019cHbtysto"
+      }
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaVersiondt4O2uRmb5i5dXgaWrcxgRCZ8YtPbA8bdZ1s9MVz7g": {
+      "Value": {
+        "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaVersiondt4O2uRmb5i5dXgaWrcxgRCZ8YtPbA8bdZ1s9MVz7g"
+      }
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaVersion9cs06voJe7r0UDm9PrTR5Q4HLEhRauZdP16X0zGKU": {
+      "Value": {
+        "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaVersion9cs06voJe7r0UDm9PrTR5Q4HLEhRauZdP16X0zGKU"
+      }
+    },
+    "AlDashdailyDashtrafficLambdaVersionKzzzhRpntE4dmkqCwT6plFDC3BTLcXwrEOBgvpIRIPU": {
+      "Value": {
+        "Ref": "AlDashdailyDashtrafficLambdaVersionKzzzhRpntE4dmkqCwT6plFDC3BTLcXwrEOBgvpIRIPU"
+      }
+    },
+    "ExtractLambdaVersionymUCCGGwTfqfZ4N44Due6e65mIKlvmjIzLrOEr1g": {
+      "Value": {
+        "Ref": "ExtractLambdaVersionymUCCGGwTfqfZ4N44Due6e65mIKlvmjIzLrOEr1g"
+      }
+    },
+    "LoadLambdaVersionvP9edj3ILJgti7k89GeagoCBAabq0j1i7noElVRtQZ0": {
+      "Value": {
+        "Ref": "LoadLambdaVersionvP9edj3ILJgti7k89GeagoCBAabq0j1i7noElVRtQZ0"
+      }
+    },
+    "TransformLambdaVersionBFdPZLR9G38pZpZtcfizkztbmN1VhvFkQCRSmLWDKw": {
+      "Value": {
+        "Ref": "TransformLambdaVersionBFdPZLR9G38pZpZtcfizkztbmN1VhvFkQCRSmLWDKw"
+      }
+    }
+  }
+}

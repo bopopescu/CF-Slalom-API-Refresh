@@ -1,0 +1,444 @@
+{
+    "properties": [
+        {
+            "name": "CF Carrefour Laval",
+            "id": "01",
+            "code": "LAV",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Champlain Place",
+            "id": "02",
+            "code": "CHP",
+            "tz": "America/Halifax"
+        },
+        {
+            "name": "CF Chinook Centre",
+            "id": "03",
+            "code": "CHI",
+            "tz": "America/Edmonton"
+        },
+        {
+            "name": "CF Fairview Mall",
+            "id": "04",
+            "code": "FVW",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Fairview Park",
+            "id": "05",
+            "code": "FPM",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Fairview Point Claire",
+            "id": "06",
+            "code": "FPC",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Galeries d’Anjou",
+            "id": "07",
+            "code": "ANJ",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Lime Ridge",
+            "id": "08",
+            "code": "LIM",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Market Mall",
+            "id": "09",
+            "code": "MKT",
+            "tz": "America/Edmonton"
+        },
+        {
+            "name": "CF Markville",
+            "id": "10",
+            "code": "MAR",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Masonville Place",
+            "id": "11",
+            "code": "MAS",
+            "tz": "America/Toronto"
+        },
+               {
+            "name": "CF Pacific Centre",
+            "id": "12",
+            "code": "PCC",
+            "tz": "Canada/Pacific"
+        },
+        {
+            "name": "CF Polo Park",
+            "id": "13",
+            "code": "PPK",
+            "tz": "America/Winnipeg"
+        },
+        {
+            "name": "CF Promenades St-Bruno",
+            "id": "14",
+            "code": "SBR",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Richmond Centre",
+            "id": "15",
+            "code": "RIC",
+            "tz": "Canada/Pacific"
+        },
+        {
+            "name": "CF Rideau Centre",
+            "id": "16",
+            "code": "RID",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Sherway Gardens",
+            "id": "17",
+            "code": "SHW",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Shops at Don Mills",
+            "id": "18",
+            "code": "DON",
+            "tz": "America/Toronto"
+        },
+        {
+            "name": "CF Toronto Eaton Centre",
+            "id": "19",
+            "code": "TEC",
+            "tz": "America/Toronto"
+        }
+    ],
+    "aislelabs": {
+        "baseurl": "https://api.aislelabs.com/api/rest/",
+        "properties": [
+            {
+                "name": "Eaton Centre",
+                "tdid": "2256",
+                "swid": "27",
+                "tz": "America/Toronto",
+                "propertyId": "19"
+            },
+            {
+                "name": "Markville Mall",
+                "tdid": "2258",
+                "swid": "20",
+                "tz": "America/Toronto",
+                "propertyId": "10"
+            },
+            {
+                "name": "Fairview Point Claire",
+                "tdid": "2260",
+                "swid": "35",
+                "tz": "America/Toronto",
+                "propertyId": "06"
+            },
+            {
+                "name": "Champlain Place",
+                "tdid": "2261",
+                "swid": "45",
+                "tz": "America/Halifax",
+                "propertyId": "02"
+            },
+            {
+                "name": "Polo Park",
+                "tdid": "2262",
+                "swid": "34",
+                "tz": "America/Winnipeg",
+                "propertyId": "13"
+            },
+            {
+                "name": "Fairview Park",
+                "tdid": "2263",
+                "swid": "48",
+                "tz": "America/Toronto",
+                "propertyId": "05"
+            },
+            {
+                "name": "Sherway Gardens",
+                "tdid": "2264",
+                "swid": "30",
+                "tz": "America/Toronto",
+                "propertyId": "17"
+            },
+            {
+                "name": "Market Mall",
+                "tdid": "2266",
+                "swid": "38",
+                "tz": "America/Edmonton",
+                "propertyId": "09"
+            },
+            {
+                "name": "Chinook Mall",
+                "tdid": "2267",
+                "swid": "44",
+                "tz": "America/Edmonton",
+                "propertyId": "03"
+            },
+            {
+                "name": "Lime Ridge",
+                "tdid": "2269",
+                "swid": "39",
+                "tz": "America/Toronto",
+                "propertyId": "08"
+            },
+            {
+                "name": "Masonville Place",
+                "tdid": "2259",
+                "swid": "37",
+                "tz": "America/Toronto",
+                "propertyId": "11"
+            },
+            {
+                "name": "Pacific Centre",
+                "tdid": "2362",
+                "swid": "36",
+                "tz": "Canada/Pacific",
+                "propertyId": "12"
+            },
+            {
+                "name": "Richmond Centre",
+                "tdid": "2363",
+                "swid": "24",
+                "tz": "Canada/Pacific",
+                "propertyId": "15"
+            },
+            {
+                "name": "Fairview Mall",
+                "tdid": "2364",
+                "swid": "42",
+                "tz": "America/Toronto",
+                "propertyId": "04"
+            },
+            {
+                "name": "Galeries d’Anjou",
+                "tdid": "2365",
+                "swid": "41",
+                "tz": "America/Toronto",
+                "propertyId": "07"
+            },
+            {
+                "name": "Carrefour Laval",
+                "tdid": "2369",
+                "swid": "40",
+                "tz": "America/Toronto",
+                "propertyId": "01"
+            },
+            {
+                "name": "Promenade St-Bruno",
+                "tdid": "2370",
+                "swid": "32",
+                "tz": "America/Toronto",
+                "propertyId": "14"
+            },
+            {
+                "name": "Rideau Centre",
+                "tdid": "2371",
+                "swid": "31",
+                "tz": "America/Toronto",
+                "propertyId": "16"
+            },
+            {
+                "name": "Shops at Don Mills",
+                "tdid": "2373",
+                "swid": "43",
+                "tz": "America/Toronto",
+                "propertyId": "18"
+            }
+            
+        ]
+    },
+    "meraki": {
+        "baseurl": "https://dashboard.meraki.com/api/v0/",
+        "organization": "417839",
+        "networks": [
+            {
+                "id": "L_655273745782407569",
+                "organizationId": "417839",
+                "name": "CF Markville",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782408770",
+                "organizationId": "417839",
+                "name": "CF Richmond Centre",
+                "timeZone": "Canada/Pacific",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409420",
+                "organizationId": "417839",
+                "name": "CF Polo Park",
+                "timeZone": "America/Winnipeg",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409399",
+                "organizationId": "417839",
+                "name": "CF Market Mall",
+                "timeZone": "America/Edmonton",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409407",
+                "organizationId": "417839",
+                "name": "CF Sherway Gardens",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409409",
+                "organizationId": "417839",
+                "name": "CF Toronto Eaton Centre",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409401",
+                "organizationId": "417839",
+                "name": "CF Pacific Centre",
+                "timeZone": "US/Pacific-New",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409400",
+                "organizationId": "417839",
+                "name": "CF Masonville Place",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409393",
+                "organizationId": "417839",
+                "name": "CF Chinook Centre",
+                "timeZone": "America/Edmonton",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409392",
+                "organizationId": "417839",
+                "name": "CF Champlain",
+                "timeZone": "America/Halifax",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409415",
+                "organizationId": "417839",
+                "name": "CF Galeries dAnjou",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409397",
+                "organizationId": "417839",
+                "name": "CF Carrefour Laval",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409398",
+                "organizationId": "417839",
+                "name": "CF Lime Ridge",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409402",
+                "organizationId": "417839",
+                "name": "CF Fairview Pointe Claire",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409396",
+                "organizationId": "417839",
+                "name": "CF Fairview Mall",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409395",
+                "organizationId": "417839",
+                "name": "CF Shops at Don Mills",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409405",
+                "organizationId": "417839",
+                "name": "CF Rideau Centre",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409403",
+                "organizationId": "417839",
+                "name": "CF Promenades St Bruno",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782409525",
+                "organizationId": "417839",
+                "name": "CF Fairview Park",
+                "timeZone": "America/Toronto",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "L_655273745782411594",
+                "organizationId": "417839",
+                "name": "CF Lab Headoffice",
+                "timeZone": "Canada/Eastern",
+                "tags": null,
+                "type": "combined"
+            },
+            {
+                "id": "N_655273745782441485",
+                "organizationId": "417839",
+                "name": "Pop-Up MX65W",
+                "timeZone": "Canada/Eastern",
+                "tags": null,
+                "type": "appliance"
+            }
+        ]
+    },
+    "lambda": {
+        "prefix": "cf-domo-loader"
+    },
+    "kinesis": {
+        "extract": "CF_ExtractKinesis",
+        "load": "CF_DomoLoaderKinesis"
+    },
+    "reports": {
+      "baseurl": "https://cfalenares:nEkf46lP@getmyreports.storefinancial.net/RawData"
+    },
+    "s3": {
+      "bucket": "cf-domo-loader-fileserver-data"
+    }
+}

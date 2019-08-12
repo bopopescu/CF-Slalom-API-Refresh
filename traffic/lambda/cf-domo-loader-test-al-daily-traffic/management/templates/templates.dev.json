@@ -1,0 +1,126 @@
+{
+  "dashboard_frequency_stream": {
+    "name": "DEV_AL_DASHBOARD_FREQUENCY",
+    "fields": "STARTDATE:DATETIME:PRIMARY,ENDDATE:DATETIME:PRIMARY,TDID:LONG:PRIMARY,ALLDURATION:DECIMAL,ALLDISPLAY:STRING,AVGVISITS:DECIMAL,RECENCYDURATION:DECIMAL,RECENCYDISPLAY:STRING"
+  },
+  "dashboard_property_stream_raw_hourly": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_RAW_HOURLY",
+    "fields": "Date:DATETIME:PRIMARY,TDID:LONG:PRIMARY,Visitors:LONG,DateLocalTime:DATETIME"
+  },
+  "dashboard_property_stream_filtered_hourly": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_FILTERED_HOURLY",
+    "fields": "Date:DATETIME:PRIMARY,TDID:LONG:PRIMARY,Visitors:LONG,AvgDwell:DECIMAL,VisitorsNew:LONG,VisitorsRepeat:LONG,visitorsUnique:LONG"
+  },
+  "dashboard_space_stream_filtered_hourly": {
+    "name": "DEV_AL_DASHBOARD_SPACE_FILTERED_HOURLY",
+    "fields": "Date:DATETIME:PRIMARY,TDID:LONG:PRIMARY,SpaceName:STRING,spaceTid:STRING:PRIMARY,Visitors:LONG,VisitorsPercent:DECIMAL,spaceAvgDwellMins:LONG"
+  },
+  "dashboard_property_stream_raw_daily": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_RAW_DAILY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,Visitors:LONG,DateLocalTime:DATETIME"
+  },
+  "dashboard_property_stream_filtered_daily": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_FILTERED_DAILY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,Visitors:LONG,AvgDwell:DECIMAL,VisitorsNew:LONG,VisitorsRepeat:LONG,visitorsUnique:LONG"
+  },
+  "dashboard_space_stream_filtered_daily": {
+    "name": "DEV_AL_DASHBOARD_SPACE_FILTERED_DAILY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,SpaceName:STRING,spaceTid:STRING:PRIMARY,Visitors:LONG,VisitorsPercent:DECIMAL,spaceAvgDwellMins:LONG"
+  },
+  "dashboard_floor_stream_daily": {
+    "name": "DEV_AL_DASHBOARD_FLOOR_DAILY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,FloorName:STRING:PRIMARY,VisitorsPercent:DECIMAL,AreaAvgDwellMins:DECIMAL,RepeatPercent:DECIMAL,EngagedPercent:DECIMAL,OtherSpaces:DECIMAL"
+  },
+  "dashboard_property_stream_raw_monthly": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_RAW_MONTHLY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,Visitors:LONG,DateLocalTime:DATETIME"
+  },
+  "dashboard_property_stream_filtered_monthly": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_FILTERED_MONTHLY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,Visitors:LONG,AvgDwell:DECIMAL,VisitorsNew:LONG,VisitorsRepeat:LONG,visitorsUnique:LONG"
+  },
+  "dashboard_space_stream_filtered_monthly": {
+    "name": "DEV_AL_DASHBOARD_SPACE_FILTERED_MONTHLY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,SpaceName:STRING,spaceTid:STRING:PRIMARY,Visitors:LONG,VisitorsPercent:DECIMAL,spaceAvgDwellMins:LONG"
+  },
+  "dashboard_property_stream_dwell_daily": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_DWELL_DAILY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,BucketMin:LONG:PRIMARY,BucketMax:LONG:PRIMARY,Value:LONG"
+  },
+  "dashboard_property_stream_dwell_monthly": {
+    "name": "DEV_AL_DASHBOARD_PROPERTY_DWELL_MONTHLY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,BucketMin:LONG:PRIMARY,BucketMax:LONG:PRIMARY,Value:LONG"
+  },
+  "dashboard_space_stream_dwell_daily": {
+    "name": "DEV_AL_DASHBOARD_SPACE_DWELL_DAILY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,SpaceID:STRING:PRIMARY,SpaceName:STRING:PRIMARY,BucketMin:LONG:PRIMARY,BucketMax:LONG:PRIMARY,Value:LONG"
+  },
+  "dashboard_space_stream_dwell_monthly": {
+    "name": "DEV_AL_DASHBOARD_SPACE_DWELL_MONTHLY",
+    "fields": "Date:DATE:PRIMARY,TDID:LONG:PRIMARY,SpaceID:STRING:PRIMARY,SpaceName:STRING:PRIMARY,BucketMin:LONG:PRIMARY,BucketMax:LONG:PRIMARY,Value:LONG"
+  },
+  "visitor_total_stream": {
+    "name": "DEV_AL_VISITOR_TOTAL_PROPERTY",
+    "fields": "TIMESTAMP:DATETIME:PRIMARY,TDID:LONG:PRIMARY,FPPL:STRING,Everyone:DECIMAL,Visitors:DECIMAL,UniqueVisitors:DECIMAL"
+  },
+  "visitor_new_stream": {
+    "name": "DEV_AL_VISITOR_NEW_PROPERTY",
+    "fields": "TIMESTAMP:DATETIME:PRIMARY,TDID:LONG:PRIMARY,FPPL:STRING,Everyone:DECIMAL,Visitors:DECIMAL,UniqueVisitors:DECIMAL"
+  },
+  "visitor_bounced_stream": {
+    "name": "DEV_AL_VISITOR_BOUNCED_PROPERTY",
+    "fields": "TIMESTAMP:DATETIME:PRIMARY,TDID:LONG:PRIMARY,FPPL:STRING,Everyone:DECIMAL,Visitors:DECIMAL,UniqueVisitors:DECIMAL"
+  },
+  "crossvisitor_stream": {
+    "name": "DEV_AL_CROSSPROPERTY",
+    "fields": "FromDate:DATE:PRIMARY,ToDate:DATE:PRIMARY,TDID:LONG:PRIMARY,fromStoreName:STRING,crossStoreVisit_To:LONG:PRIMARY,Value:DECIMAL"
+  },
+  "socialwifi_stream": {
+    "name": "DEV_AL_SOCIALWIFI",
+    "fields": "date:DATE:PRIMARY,tdid:LONG:PRIMARY,uniqueConnectedVisitors:DECIMAL,genderTypesTotal:DECIMAL,maleCount:DECIMAL,femaleCount:DECIMAL,loginTotal:DECIMAL,facebookLogin:DECIMAL,emailLogin:DECIMAL,twitterLogin:DECIMAL"
+  },
+  "giftcard_transaction_stream": {
+    "name": "DEV_GF_GIFTCARD_TRANSACTION",
+    "fields": "cardNumber:STRING,externalId:STRING,printText:STRING,transactionId:STRING:PRIMARY,systemReceiptTime:DATETIME,localTransactionTime:DATETIME,transactionTimeZone:LONG,transactionType:STRING,transactionAmount:DECIMAL,transactionCurrencyMode:LONG,merchantName:STRING,merchantCategoryCode:STRING,redeemedmerchantGroup:STRING,authorizationRequestId:STRING,authorizationRequestDatetime:DATETIME,totalbasketsize:DECIMAL,liftAmount:DECIMAL,settlementEffectiveDate:DATETIME,chargeBackReason:STRING,chargeBackType:STRING,functionCode:STRING,additionalDataDetail:STRING"
+  },
+  "giftcard_info_stream": {
+    "name": "DEV_GF_GIFTCARD_INFORMATION",
+    "fields": "cardNumber:STRING,externalId:STRING,printText:STRING,activationDate:DATETIME,programId:STRING,programName:STRING,uniqueTag:STRING,accountExpirationDate:DATETIME,giftCardType:STRING,activatingSystemTransactionId:STRING,activationAmount:LONG,promotionName:STRING,promotionFundedAmount:DECIMAL,propertyFeeAmount:DECIMAL,paymentType:STRING,merchantGroupId:STRING,merchantGroupName:STRING,cardholdername:STRING,campaignId:STRING,campaignName:STRING,clientOrderDate:DATETIME,clientreferencenumber:STRING,clientTrackingId:STRING,salesChannel:STRING,activationNotes:STRING,csr:STRING,sundryType:STRING,sundryUnitPrice:DECIMAL,sundryCount:LONG,sundryTotalAmount:DECIMAL,dateTransferred:DATETIME,externalIdTransferredTo:STRING,merchantGroupIdTransferredTo:STRING,transferTransactionNotes:STRING,lastreloadDate:DATETIME,totalReloadAmount:DECIMAL,accountId:STRING,corporateIndividualPurchase:STRING,company:STRING,activationFirstName:STRING,activationLastName:STRING,activationAddress1:STRING,activationAddress2:STRING,activationCity:STRING,activationStateProvince:STRING,activationCountry:STRING,activationPostalCode:STRING,activationEmail:STRING,activationPhone:STRING,activationFax:STRING,activationOptIn:STRING,clientIdentifier:STRING,registrationFirstName:STRING,registrationLastName:STRING,registrationAddress1:STRING,registrationAddress2:STRING,registrationCity:STRING,registrationStateProvince:STRING,registrationcountry:STRING,registrationPostalCode:STRING,registrationEmail:STRING,registrationPhone:STRING,registrationFax:STRING,registrationOptIn:STRING,cardStatus:STRING,cardStatusReason:STRING,currentbalance:DECIMAL,promotionbalance:DECIMAL"
+  },
+  "sales_cti_category_stream": {
+    "name": "DEV_SALES_CTI_CATEGORY",
+    "fields": "icsCode:LONG:PRIMARY,icsDesc:STRING"
+  },
+  "sales_cti_project_stream": {
+    "name": "DEV_SALES_CTI_PROJECT",
+    "fields": "project:STRING:PRIMARY,projectDesc:STRING,projectGrp:STRING,projectGrpDesc:STRING,portfolio:STRING,portfolioDesc:STRING"
+  },
+  "sales_cti_space_stream": {
+    "name": "DEV_SALES_CTI_SPACE",
+    "fields": "project:STRING:PRIMARY,tenant:STRING:PRIMARY,lease:STRING:PRIMARY,spaceNo:LONG:PRIMARY,tenantCorp:STRING,dba:STRING,icsCode:LONG,unitNo:STRING,spaceType:STRING,floor:STRING,startDate:DATE,endDate:DATE,rentableAreaActual:LONG,rentableAreaLease:LONG,shopcard:STRING,grocPct:DECIMAL,salesPsf:DECIMAL,totalRent:LONG,baseRent:LONG,opCost:LONG,curMthSale:LONG,priorMthSale:LONG,mthBaseRent:LONG,mthOpRent:LONG,mthTotalRent:LONG,refMonth:DATE:PRIMARY"
+  },
+  "sales_cti_store_stream": {
+    "name": "DEV_SALES_CTI_STORE",
+    "fields": "project:STRING:PRIMARY,tenant:STRING:PRIMARY,lease:STRING:PRIMARY,unitNo:STRING:PRIMARY,dba:STRING,categoryId:LONG:PRIMARY"
+  },
+  "sales_cti_tenant_stream": {
+    "name": "DEV_SALES_CTI_TENANT",
+    "fields": "tenant:STRING:PRIMARY,tenantName:STRING,corpTenant:STRING,corpTenantName:STRING,auditDate:STRING"
+  },
+  "sales_cti_unit_stream": {
+    "name": "DEV_SALES_CTI_UNIT",
+    "fields": "project:STRING:PRIMARY,unit:STRING:PRIMARY,floor:STRING,spaceType:STRING,unitType:STRING,rentArea:LONG,stat:STRING,unitStatus:STRING,startDate:DATE,endDate:DATE"
+  },
+  "sales_rcis_category_stream": {
+    "name": "DEV_SALES_RCIS_CATEGORY",
+    "fields": "categoryId:LONG:PRIMARY,categoryNameEng:STRING,categoryNameFre:STRING"
+  },
+  "meraki_devices": {
+    "name": "DEV_MERAKI_DEVICES",
+    "fields": "serial:STRING:PRIMARY,networkId:STRING,name:STRING,lat:STRING,lng:STRING,mac:STRING,model:STRING,address:STRING,lanIp:STRING,tags:STRING"
+  },
+  "meraki_devices_status": {
+    "name": "DEV_MERAKI_DEVICES_STATUS",
+    "fields": "serial:STRING:PRIMARY,networkId:STRING,name:STRING,mac:STRING,status:STRING"
+  }
+}

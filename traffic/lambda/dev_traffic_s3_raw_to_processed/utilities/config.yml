@@ -1,0 +1,7 @@
+---
+aws:
+  bucket: qa-traffic-processed
+  originating_bucket: qa-traffic-raw
+status_table:
+  database: domoloader
+  table: unfiltered_data_status

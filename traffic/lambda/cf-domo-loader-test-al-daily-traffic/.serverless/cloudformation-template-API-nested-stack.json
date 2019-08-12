@@ -1,0 +1,531 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "APINestedStack nested stack",
+  "Parameters": {},
+  "Resources": {
+    "ApiGatewayResourceV1": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "v1",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Aislelabs": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "aislelabs",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsCrossvisitor": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "crossvisitor",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsDailydwell": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "dailyDwell",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsDailytraffic": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "dailyTraffic",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsFrequency": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "frequency",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsMonthlytraffic": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "monthlyTraffic",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsSocialwifi": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "socialwifi",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1AislelabsVisitorflow": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Aislelabs"
+        },
+        "PathPart": "visitorFlow",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalescticategory": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_cti_category",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalesctiproject": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_cti_project",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalesctispace": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_cti_space",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalesctistore": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_cti_store",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalesctitenant": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_cti_tenant",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalesctiunit": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_cti_unit",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Backfillsalesrciscategory": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "backfill_sales_rcis_category",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Giftcard": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "giftcard",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1GiftcardGiftcardinfo": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Giftcard"
+        },
+        "PathPart": "giftcardInfo",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1GiftcardGiftcardtransaction": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Giftcard"
+        },
+        "PathPart": "giftcardTransaction",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Meraki": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "meraki",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1MerakiDevices": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Meraki"
+        },
+        "PathPart": "devices",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1MerakiDevicesstatus": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1Meraki"
+        },
+        "PathPart": "devicesStatus",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalescticategory": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_cti_category",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalesctiproject": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_cti_project",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalesctispace": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_cti_space",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalesctistore": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_cti_store",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalesctitenant": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_cti_tenant",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalesctiunit": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_cti_unit",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayResourceV1Schedulesalesrciscategory": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "ApiGatewayResourceV1"
+        },
+        "PathPart": "schedule_sales_rcis_category",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      },
+      "DependsOn": []
+    },
+    "ApiGatewayRestApi": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "dev-cf-domo-loader",
+        "EndpointConfiguration": {
+          "Types": [
+            "EDGE"
+          ]
+        }
+      },
+      "DependsOn": []
+    }
+  },
+  "Outputs": {
+    "ApiGatewayRestApi": {
+      "Value": {
+        "Ref": "ApiGatewayRestApi"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsDailytraffic": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsDailytraffic"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsMonthlytraffic": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsMonthlytraffic"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsDailydwell": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsDailydwell"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsFrequency": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsFrequency"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsVisitorflow": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsVisitorflow"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsCrossvisitor": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsCrossvisitor"
+      }
+    },
+    "ApiGatewayResourceV1AislelabsSocialwifi": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1AislelabsSocialwifi"
+      }
+    },
+    "ApiGatewayResourceV1GiftcardGiftcardtransaction": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1GiftcardGiftcardtransaction"
+      }
+    },
+    "ApiGatewayResourceV1GiftcardGiftcardinfo": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1GiftcardGiftcardinfo"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalescticategory": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalescticategory"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalesctiproject": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalesctiproject"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalesctispace": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalesctispace"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalesctistore": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalesctistore"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalesctitenant": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalesctitenant"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalesctiunit": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalesctiunit"
+      }
+    },
+    "ApiGatewayResourceV1Schedulesalesrciscategory": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Schedulesalesrciscategory"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalescticategory": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalescticategory"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalesctiproject": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalesctiproject"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalesctispace": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalesctispace"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalesctistore": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalesctistore"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalesctitenant": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalesctitenant"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalesctiunit": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalesctiunit"
+      }
+    },
+    "ApiGatewayResourceV1Backfillsalesrciscategory": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1Backfillsalesrciscategory"
+      }
+    },
+    "ApiGatewayResourceV1MerakiDevices": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1MerakiDevices"
+      }
+    },
+    "ApiGatewayResourceV1MerakiDevicesstatus": {
+      "Value": {
+        "Ref": "ApiGatewayResourceV1MerakiDevicesstatus"
+      }
+    }
+  }
+}

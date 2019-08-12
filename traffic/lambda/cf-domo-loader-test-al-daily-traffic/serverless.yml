@@ -1,0 +1,412 @@
+service: cf-domo-loader # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: ${file(./serverless.env.yml):${opt:stage}.region}
+  stage: ${file(./serverless.env.yml):${opt:stage}.stage}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+       - "kinesis:*"
+       - "lambda:*"
+       - "s3:*"
+      Resource: "*"
+  environment:
+      stage: ${file(./serverless.env.yml):${opt:stage}.stage}
+      log_level: ${file(./serverless.env.yml):${opt:stage}.log_level}
+      bouncedstreamid: ${file(./serverless.env.yml):${opt:stage}.bouncedstreamid}
+      newstreamid: ${file(./serverless.env.yml):${opt:stage}.newstreamid}
+      totalstreamid: ${file(./serverless.env.yml):${opt:stage}.totalstreamid}
+      hourlyFilteredPropertyStreamId: ${file(./serverless.env.yml):${opt:stage}.hourlyFilteredPropertyStreamId}
+      hourlyFilteredSpaceStreamId: ${file(./serverless.env.yml):${opt:stage}.hourlyFilteredSpaceStreamId}
+      hourlyRawPropertyStreamId: ${file(./serverless.env.yml):${opt:stage}.hourlyRawPropertyStreamId}
+      hourlyRawSpaceStreamId: ${file(./serverless.env.yml):${opt:stage}.hourlyRawSpaceStreamId}
+      dailyFilteredPropertyStreamId: ${file(./serverless.env.yml):${opt:stage}.dailyFilteredPropertyStreamId}
+      dailyFilteredSpaceStreamId: ${file(./serverless.env.yml):${opt:stage}.dailyFilteredSpaceStreamId}
+      dailyRawPropertyStreamId: ${file(./serverless.env.yml):${opt:stage}.dailyRawPropertyStreamId}
+      dailyRawSpaceStreamId: ${file(./serverless.env.yml):${opt:stage}.dailyRawSpaceStreamId}
+      dailyPropertyDwellStreamId: ${file(./serverless.env.yml):${opt:stage}.dailyPropertyDwellStreamId}
+      dailySpaceDwellStreamId: ${file(./serverless.env.yml):${opt:stage}.dailySpaceDwellStreamId}
+      dailyFloorStreamId: ${file(./serverless.env.yml):${opt:stage}.dailyFloorStreamId}
+      monthlyPropertyDwellStreamId: ${file(./serverless.env.yml):${opt:stage}.monthlyPropertyDwellStreamId}
+      monthlySpaceDwellStreamId: ${file(./serverless.env.yml):${opt:stage}.monthlySpaceDwellStreamId}
+      monthlyFilteredPropertyStreamId: ${file(./serverless.env.yml):${opt:stage}.monthlyFilteredPropertyStreamId}
+      monthlyFilteredSpaceStreamId: ${file(./serverless.env.yml):${opt:stage}.monthlyFilteredSpaceStreamId}
+      monthlyRawPropertyStreamId: ${file(./serverless.env.yml):${opt:stage}.monthlyRawPropertyStreamId}
+      monthlyRawSpaceStreamId: ${file(./serverless.env.yml):${opt:stage}.monthlyRawSpaceStreamId}
+      frequencyStreamId: ${file(./serverless.env.yml):${opt:stage}.frequencyStreamId}
+      crossvisitorStreamId: ${file(./serverless.env.yml):${opt:stage}.crossvisitorStreamId}
+      merakiDevicesStatusStreamId: ${file(./serverless.env.yml):${opt:stage}.merakiDevicesStatusStreamId}
+      merakiDevicesStreamId: ${file(./serverless.env.yml):${opt:stage}.merakiDevicesStreamId}
+      socialwifiStreamId: ${file(./serverless.env.yml):${opt:stage}.socialwifiStreamId}
+      giftCardTransactionStreamId: ${file(./serverless.env.yml):${opt:stage}.giftCardTransactionStreamId}
+      giftCardInfoStreamId: ${file(./serverless.env.yml):${opt:stage}.giftCardInfoStreamId}
+      dbhost: ${file(credentials.${opt:stage}.yml):dbhost}
+      dbuser: ${file(credentials.${opt:stage}.yml):dbuser}
+      dbpassword: ${file(credentials.${opt:stage}.yml):dbpassword}
+      dbname: ${file(credentials.${opt:stage}.yml):dbname}
+
+
+
+plugins:
+  - serverless-plugin-split-stacks
+  - serverless-plugin-aws-alerts
+  - serverless-offline
+# you can overwrite defaults here
+#  stage: dev
+#  region: us-west-2
+
+custom:
+  alerts:
+    topics:
+      alarm:
+        topic: ${self:service}-alerts-alarm
+        notifications:
+          - protocol: email
+            endpoint: alessandro.lenares@cadillacfairview.com # Change this to your email address
+    alarms:
+
+
+functions:
+  transform:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+    handler: handlers/main.transform
+    timeout: 300
+  load:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+    handler: handlers/main.load
+    timeout: 300
+  extract:
+    environment:
+        merakikey: ${file(credentials.${opt:stage}.yml):merakikey}
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+        maxretries: 5
+    handler: handlers/main.extract
+    timeout: 300
+  al-daily-traffic:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyTraffic
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyTraffic
+        - schedule: cron(0 9 * * ? *)
+        
+  al-daily-traffic_refresh_8:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyTraffic_refresh_8
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyTraffic
+        - schedule: cron(30 13 * * ? *)
+        
+  al-daily-traffic_refresh_15:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyTraffic_refresh_15
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyTraffic
+        - schedule: cron(0 14 * * ? *)
+        
+  al-daily-traffic_refresh_22:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyTraffic_refresh_22
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyTraffic
+        - schedule: cron(30 14 * * ? *)
+        
+  al-daily-traffic_refresh_29:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyTraffic_refresh_29
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyTraffic
+        - schedule: cron(00 15 * * ? *)
+        
+  al-monthly-traffic:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getMonthlyTraffic
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/monthlyTraffic
+        - schedule: cron(30 9 * * ? *)
+  al-daily-dwell:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyDwell
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyDwell
+        - schedule: cron(0 10 * * ? *)
+        
+  al-daily-dwell_refresh_8:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyDwell_refresh_8
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyDwell
+        - schedule: cron(30 15 * * ? *)
+        
+  al-daily-dwell_refresh_15:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyDwell_refresh_15
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyDwell
+        - schedule: cron(0 16 * * ? *)
+        
+  al-daily-dwell_refresh_22:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyDwell_refresh_22
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyDwell
+        - schedule: cron(30 16 * * ? *)
+        
+  al-daily-dwell_refresh_29:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_dashboard.getDailyDwell_refresh_29
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/dailyDwell
+        - schedule: cron(0 17 * * ? *)
+  al-frequency:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+        ndays: 30
+    handler: scheduling/aislelabs_frequency.get
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/frequency
+        #- schedule: cron(0 12 * * ? *)
+  al-visitor-flow:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_visitor_flow.get
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/visitorFlow
+        - schedule: cron(30 10 * * ? *)
+  al-crossvisitor:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_crossvisitor.get
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/crossvisitor
+        - schedule: cron(0 11 * * ? *)
+  al-socialwifi:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_socialwifi.get
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/socialwifi
+        - schedule: cron(30 11 * * ? *)
+  gf-giftcard-transaction:
+    handler: scheduling/s3_gift_cards.getGiftCardTransaction
+    timeout: 30
+    events:
+        - http: GET v1/giftcard/giftcardTransaction
+        - schedule: cron(45 12 * * ? *)
+  gf-giftcard-info:
+    handler: scheduling/s3_gift_cards.getGiftCardInfo
+    timeout: 30
+    events:
+        - http: GET v1/giftcard/giftcardInfo
+        - schedule: cron(30 12 * * ? *)
+  schedule-sales-cti-category:
+    handler: scheduling/s3_sales.schedule_cti_category
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_cti_category
+       #- schedule: cron(30 13 * * ? *)
+  schedule-sales-cti-project:
+    handler: scheduling/s3_sales.schedule_cti_project
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_cti_project
+        #- schedule: cron(45 13 * * ? *)
+  schedule-sales-cti-space:
+    handler: scheduling/s3_sales.schedule_cti_space
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_cti_space
+        #- schedule: cron(0 14 * * ? *)
+  schedule-sales-cti-store:
+    handler: scheduling/s3_sales.schedule_cti_store
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_cti_store
+        #- schedule: cron(15 14 * * ? *)
+  schedule-sales-cti-tenant:
+    handler: scheduling/s3_sales.schedule_cti_tenant
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_cti_tenant
+        #- schedule: cron(30 14 * * ? *)
+  schedule-sales-cti-unit:
+    handler: scheduling/s3_sales.schedule_cti_unit
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_cti_unit
+        #- schedule: cron(45 14 * * ? *)
+  schedule-sales-rcis-category:
+    handler: scheduling/s3_sales.schedule_rcis_category
+    timeout: 30
+    events:
+        - http: GET v1/schedule_sales_rcis_category
+        #- schedule: cron(0 15 * * ? *)
+  backfill-sales-cti-category:
+    handler: scheduling/s3_sales.backfill_cti_category
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_cti_category
+  backfill-sales-cti-project:
+    handler: scheduling/s3_sales.backfill_cti_project
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_cti_project
+  backfill-sales-cti-space:
+    handler: scheduling/s3_sales.backfill_cti_space
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_cti_space
+  backfill-sales-cti-store:
+    handler: scheduling/s3_sales.backfill_cti_store
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_cti_store
+  backfill-sales-cti-tenant:
+    handler: scheduling/s3_sales.backfill_cti_tenant
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_cti_tenant
+  backfill-sales-cti-unit:
+    handler: scheduling/s3_sales.backfill_cti_unit
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_cti_unit
+  backfill-sales-rcis-category:
+    handler: scheduling/s3_sales.backfill_rcis_category
+    timeout: 30
+    events:
+        - http: GET v1/backfill_sales_rcis_category
+  meraki-devices:
+    environment:
+        merakikey: ${file(credentials.${opt:stage}.yml):merakikey}
+    handler: scheduling/meraki.getDevices
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/meraki/devices
+  meraki-devices-status:
+    environment:
+        merakikey: ${file(credentials.${opt:stage}.yml):merakikey}
+    handler: scheduling/meraki.getDevicesStatus
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/meraki/devicesStatus
+#        - schedule: cron(*/30 * * * ? *)
+resources:
+    Resources:
+        ExtractKinesis:
+            Type: "AWS::Kinesis::Stream"
+            Properties:
+              Name: "CF_ExtractKinesis"
+              ShardCount: 2
+        ExtractKinesisMap:
+            Type: "AWS::Lambda::EventSourceMapping"
+            DependsOn:
+              - "ExtractLambdaFunction"
+            Properties:
+                BatchSize: 1
+                EventSourceArn:
+                  Fn::GetAtt:
+                    - "ExtractKinesis"
+                    - "Arn"
+                FunctionName:
+                  Fn::GetAtt:
+                    - "ExtractLambdaFunction"
+                    - "Arn"
+                StartingPosition: "TRIM_HORIZON"
+        DomoLoaderKinesis:
+            Type: "AWS::Kinesis::Stream"
+            Properties:
+              Name: "CF_DomoLoaderKinesis"
+              ShardCount: 2
+        LoaderKinesisMap:
+            Type: "AWS::Lambda::EventSourceMapping"
+            DependsOn:
+              - "LoadLambdaFunction"
+            Properties:
+                BatchSize: 10000
+                EventSourceArn:
+                  Fn::GetAtt:
+                    - "DomoLoaderKinesis"
+                    - "Arn"
+                FunctionName:
+                  Fn::GetAtt:
+                    - "LoadLambdaFunction"
+                    - "Arn"
+                StartingPosition: "TRIM_HORIZON"

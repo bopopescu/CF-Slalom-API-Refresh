@@ -1,0 +1,13 @@
+CONTRIBUTORS.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+ikp3db.py
+iksettrace3.c
+pip-delete-this-directory.txt
+setup.cfg
+setup.py
+ikp3db.egg-info/PKG-INFO
+ikp3db.egg-info/SOURCES.txt
+ikp3db.egg-info/dependency_links.txt
+ikp3db.egg-info/top_level.txt

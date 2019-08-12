@@ -1,0 +1,17 @@
+---
+aws:
+  bucket: qa-traffic-processed
+  originating_bucket: qa-traffic-raw
+status_table:
+  database: domoloader
+  table: unfiltered_data_status
+data_table:
+  database: domoloader
+  table_daily: DEV_LAB_AL_DASHBOARD_PROPERTY_RAW_DAILY
+  table_hourly : DEV_LAB_AL_DASHBOARD_PROPERTY_RAW_HOURLY
+column_name_mapping:
+  Date : Date     
+  TDID : TDID       
+  Visitors : Visitors
+  updatedAt : updatedAt
+  DateLocalTime : DateLocalTime

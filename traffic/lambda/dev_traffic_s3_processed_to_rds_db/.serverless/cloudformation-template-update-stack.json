@@ -1,0 +1,82 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Resources": {
+    "ServerlessDeploymentBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/dev_traffic_s3_processed_to_rds_db"
+      }
+    },
+    "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/traffic-rds-db-deploy/dev/1564076795457-2019-07-25T17:46:35.457Z/traffic-rds-db-deploy.zip"
+        },
+        "FunctionName": "dev_traffic_s3_processed_to_rds_db",
+        "Handler": "main.lambda_handler",
+        "MemorySize": 512,
+        "Role": "arn:aws:iam::310064023253:role/service-role/customer_profile_AL_to_raw-role-xe2bqfm5",
+        "Runtime": "python3.6",
+        "Timeout": 900,
+        "Description": "Script to retrieve data from qa-traffic-processed S3 bucket into RDS table DEV_AL_DASHBOARD_PROPERTY_RAW_DAILY  or DEV_AL_DASHBOARD_PROPERTY_RAW_HOURLY",
+        "Environment": {
+          "Variables": {
+            "apikey": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gEoEHnAjliRme2bM5w+NMpnAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMjirnZR8b5UBxgTZ6AgEQgDvrOPUAoMcP3RCIc0XmJp34GksbIXqzu1QPIZmRsMXga5yjj2FOANrEBR5scBxffHHHFM9WvWcbVSL23g==",
+            "aws_region": "us-east-1",
+            "db_password": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gHr01plcfbYdIgjaP8qeKxQAAAAbjBsBgkqhkiG9w0BBwagXzBdAgEAMFgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM/a9TjYHJeZITVsFiAgEQgCtHsOIot/7er7vqNlvKuPwsn5i0dHm+vN06f+1JR0UrBuNQz8L8jNofnNEs",
+            "db_url": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gHQuQO7vW3uvEq6M6eSJZRWAAAAljCBkwYJKoZIhvcNAQcGoIGFMIGCAgEAMH0GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM/5hbtKGk/bpYfcDpAgEQgFCGmwoxqJoKriZ3QRQLKH/OjtdJhQhzKN7AeRey2snliLdcN401RUu/WfN74QMOmC5dQPF/Qa6tp2MkJFj2nGG0sT7BPiCGvpZcI6/+yxO/7Q==",
+            "db_user": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gEbd4oY9yeRBPRVtPEl+aV8AAAAYjBgBgkqhkiG9w0BBwagUzBRAgEAMEwGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM6YP7mHs0FewhaW0WAgEQgB8xE0OQFJEZEncgtHEap2KURy1iro7i4T46sA+eFcWy",
+            "recipients": "andres.urrego@slalom.com,mithra.ramesh@slalom.com",
+            "sender": "noreply@cadillacfairview.tech"
+          }
+        }
+      },
+      "DependsOn": [
+        "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLogGroup"
+      ]
+    },
+    "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLambdaVersion2QqfM5CLRCE3B66wdZmYutPH8iG4FH9D41g45jmH4": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLambdaFunction"
+        },
+        "CodeSha256": "WIA3KWyKmi+TNxf7EVR4PH9WPnhZlnlFyfzZlvD0JWk=",
+        "Description": "Script to retrieve data from qa-traffic-processed S3 bucket into RDS table DEV_AL_DASHBOARD_PROPERTY_RAW_DAILY  or DEV_AL_DASHBOARD_PROPERTY_RAW_HOURLY"
+      }
+    }
+  },
+  "Outputs": {
+    "ServerlessDeploymentBucketName": {
+      "Value": {
+        "Ref": "ServerlessDeploymentBucket"
+      }
+    },
+    "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "DevUnderscoretrafficUnderscores3UnderscoreprocessedUnderscoretoUnderscorerdsUnderscoredbLambdaVersion2QqfM5CLRCE3B66wdZmYutPH8iG4FH9D41g45jmH4"
+      }
+    }
+  }
+}

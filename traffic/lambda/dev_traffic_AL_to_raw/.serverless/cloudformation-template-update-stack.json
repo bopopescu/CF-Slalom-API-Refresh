@@ -1,0 +1,225 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Resources": {
+    "ServerlessDeploymentBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/dev_traffic_AL_to_raw"
+      }
+    },
+    "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/unfiltred-traffic/dev/1564069107323-2019-07-25T15:38:27.323Z/unfiltred-traffic.zip"
+        },
+        "FunctionName": "dev_traffic_AL_to_raw",
+        "Handler": "main.lambda_handler",
+        "MemorySize": 512,
+        "Role": "arn:aws:iam::310064023253:role/service-role/customer_profile_AL_to_raw-role-xe2bqfm5",
+        "Runtime": "python3.6",
+        "Timeout": 900,
+        "Description": "QA Script to Retrieve Data from Aislelabs",
+        "Environment": {
+          "Variables": {
+            "apikey": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gEoEHnAjliRme2bM5w+NMpnAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMjirnZR8b5UBxgTZ6AgEQgDvrOPUAoMcP3RCIc0XmJp34GksbIXqzu1QPIZmRsMXga5yjj2FOANrEBR5scBxffHHHFM9WvWcbVSL23g==",
+            "aws_region": "us-east-1",
+            "db_password": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gHr01plcfbYdIgjaP8qeKxQAAAAbjBsBgkqhkiG9w0BBwagXzBdAgEAMFgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM/a9TjYHJeZITVsFiAgEQgCtHsOIot/7er7vqNlvKuPwsn5i0dHm+vN06f+1JR0UrBuNQz8L8jNofnNEs",
+            "db_url": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gHQuQO7vW3uvEq6M6eSJZRWAAAAljCBkwYJKoZIhvcNAQcGoIGFMIGCAgEAMH0GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM/5hbtKGk/bpYfcDpAgEQgFCGmwoxqJoKriZ3QRQLKH/OjtdJhQhzKN7AeRey2snliLdcN401RUu/WfN74QMOmC5dQPF/Qa6tp2MkJFj2nGG0sT7BPiCGvpZcI6/+yxO/7Q==",
+            "db_user": "AQICAHhMz1Wf7tTGilIGlJZDb3LaCAXhS5a/i+jj8GeI1TQa6gEbd4oY9yeRBPRVtPEl+aV8AAAAYjBgBgkqhkiG9w0BBwagUzBRAgEAMEwGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM6YP7mHs0FewhaW0WAgEQgB8xE0OQFJEZEncgtHEap2KURy1iro7i4T46sA+eFcWy",
+            "recipients": "andres.urrego@slalom.com,mithra.ramesh@slalom.com,doug.patrick@slalom.com",
+            "sender": "noreply@cadillacfairview.tech"
+          }
+        }
+      },
+      "DependsOn": [
+        "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLogGroup"
+      ]
+    },
+    "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaVersion19IF1Cqlrnf352TnC5upjK3F2jiF7ILUzjuPiqLI": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaFunction"
+        },
+        "CodeSha256": "OOczMIzUPeQcL+eJC6RrJH8HN0Rhm2WZnmXO1DxkbNc=",
+        "Description": "QA Script to Retrieve Data from Aislelabs"
+      }
+    },
+    "ApiGatewayRestApi": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "dev-unfiltred-traffic",
+        "EndpointConfiguration": {
+          "Types": [
+            "EDGE"
+          ]
+        }
+      }
+    },
+    "ApiGatewayResourceUnfilteredDashtraffic": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "unfiltered-traffic",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodUnfilteredDashtrafficPost": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "RequestParameters": {
+          "method.request.querystring.url": true
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceUnfilteredDashtraffic"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "AWS_IAM",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      }
+    },
+    "ApiGatewayDeployment1564069030124": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "StageName": "dev"
+      },
+      "DependsOn": [
+        "ApiGatewayMethodUnfilteredDashtrafficPost"
+      ]
+    },
+    "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "ServerlessDeploymentBucketName": {
+      "Value": {
+        "Ref": "ServerlessDeploymentBucket"
+      }
+    },
+    "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "DevUnderscoretrafficUnderscoreALUnderscoretoUnderscorerawLambdaVersion19IF1Cqlrnf352TnC5upjK3F2jiF7ILUzjuPiqLI"
+      }
+    },
+    "ServiceEndpoint": {
+      "Description": "URL of the service endpoint",
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "ApiGatewayRestApi"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/dev"
+          ]
+        ]
+      }
+    }
+  }
+}

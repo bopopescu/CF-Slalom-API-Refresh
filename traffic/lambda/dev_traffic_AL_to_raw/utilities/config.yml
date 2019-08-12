@@ -1,0 +1,10 @@
+---
+aislelabs:
+  baseurl: https://api.aislelabs.com/api/rest
+  domain: "/metrics/detailedunfilteredreport.json?"
+aws:
+  bucket: qa-traffic-raw
+status_table:
+  database: domoloader
+  table: unfiltered_data_status
+

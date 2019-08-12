@@ -1,0 +1,6 @@
+mysql-connector
+numpy
+pandas
+pyyaml
+requests
+s3fs
