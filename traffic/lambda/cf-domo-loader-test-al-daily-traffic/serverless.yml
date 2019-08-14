@@ -109,7 +109,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyTraffic
-        - schedule: cron(30 13 * * ? *)
+        - schedule: cron(0 0 * * ? *)
         
   al-daily-traffic_refresh_15:
     environment:
@@ -121,7 +121,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyTraffic
-        - schedule: cron(0 14 * * ? *)
+        - schedule: cron(30 00 * * ? *)
         
   al-daily-traffic_refresh_22:
     environment:
@@ -133,7 +133,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyTraffic
-        - schedule: cron(30 14 * * ? *)
+        - schedule: cron(00 1 * * ? *)
         
   al-daily-traffic_refresh_29:
     environment:
@@ -145,7 +145,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyTraffic
-        - schedule: cron(00 15 * * ? *)
+        - schedule: cron(30 1 * * ? *)
         
   al-monthly-traffic:
     environment:
@@ -180,7 +180,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyDwell
-        - schedule: cron(30 15 * * ? *)
+        - schedule: cron(00 2 * * ? *)
         
   al-daily-dwell_refresh_15:
     environment:
@@ -192,7 +192,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyDwell
-        - schedule: cron(0 16 * * ? *)
+        - schedule: cron(30 2 * * ? *)
         
   al-daily-dwell_refresh_22:
     environment:
@@ -204,7 +204,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyDwell
-        - schedule: cron(30 16 * * ? *)
+        - schedule: cron(00 3 * * ? *)
         
   al-daily-dwell_refresh_29:
     environment:
@@ -216,7 +216,7 @@ functions:
     timeout: 30
     events:
         - http: GET v1/aislelabs/dailyDwell
-        - schedule: cron(0 17 * * ? *)
+        - schedule: cron(30 3 * * ? *)
   al-frequency:
     environment:
         apikey: ${file(credentials.${opt:stage}.yml):apikey}
@@ -240,6 +240,55 @@ functions:
     events:
         - http: GET v1/aislelabs/visitorFlow
         - schedule: cron(30 10 * * ? *)
+        
+  al-visitor-flow_refresh_8:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_visitor_flow.get_refresh_8
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/visitorFlow
+        - schedule: cron(00 4 * * ? *)
+        
+  al-visitor-flow_refresh_15:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_visitor_flow.get_refresh_15
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/visitorFlow
+        - schedule: cron(30 4 * * ? *)
+        
+  al-visitor-flow_refresh_22:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_visitor_flow.get_refresh_22
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/visitorFlow
+        - schedule: cron(00 5 * * ? *)
+        
+  al-visitor-flow_refresh_29:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_visitor_flow.get_refresh_29
+    alarms:
+      - functionErrors
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/visitorFlow
+        - schedule: cron(30 5 * * ? *)
+        
   al-crossvisitor:
     environment:
         apikey: ${file(credentials.${opt:stage}.yml):apikey}
@@ -260,6 +309,49 @@ functions:
     events:
         - http: GET v1/aislelabs/socialwifi
         - schedule: cron(30 11 * * ? *)
+        
+  al-socialwifi_refresh_8:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_socialwifi.get_refresh_8
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/socialwifi
+        - schedule: cron(00 13 * * ? *)
+        
+  al-socialwifi_refresh_15:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_socialwifi.get_refresh_15
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/socialwifi
+        - schedule: cron(00 14 * * ? *)
+        
+  al-socialwifi_refresh_22:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_socialwifi.get_refresh_22
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/socialwifi
+        - schedule: cron(00 15 * * ? *)
+        
+        
+  al-socialwifi_refresh_29:
+    environment:
+        apikey: ${file(credentials.${opt:stage}.yml):apikey}
+        apikey2: ${file(credentials.${opt:stage}.yml):apikey2}
+    handler: scheduling/aislelabs_socialwifi.get_refresh_29
+    timeout: 30
+    events:
+        - http: GET v1/aislelabs/socialwifi
+        - schedule: cron(00 16 * * ? *)
+        
+
   gf-giftcard-transaction:
     handler: scheduling/s3_gift_cards.getGiftCardTransaction
     timeout: 30

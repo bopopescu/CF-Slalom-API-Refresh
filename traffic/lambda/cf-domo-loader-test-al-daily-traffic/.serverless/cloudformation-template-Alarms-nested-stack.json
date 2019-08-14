@@ -38,10 +38,19 @@
     "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter": {
       "Type": "String"
     },
-    "AlDashfrequencyLambdaFunctionParameter": {
+    "AlDashvisitorDashflowLambdaFunctionParameter": {
       "Type": "String"
     },
-    "AlDashvisitorDashflowLambdaFunctionParameter": {
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunctionParameter": {
+      "Type": "String"
+    },
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionParameter": {
       "Type": "String"
     },
     "AlDashcrossvisitorLambdaFunctionParameter": {
@@ -105,6 +114,122 @@
             "Name": "FunctionName",
             "Value": {
               "Ref": "AlDashdailyDashdwellLambdaFunctionParameter"
+            }
+          }
+        ],
+        "TreatMissingData": "missing",
+        "Statistic": "Sum"
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore15FunctionErrorsAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Errors",
+        "Threshold": 1,
+        "Period": 60,
+        "EvaluationPeriods": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "OKActions": [],
+        "AlarmActions": [
+          {
+            "Ref": "AwsAlertsAlarmParameter"
+          }
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionParameter"
+            }
+          }
+        ],
+        "TreatMissingData": "missing",
+        "Statistic": "Sum"
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore22FunctionErrorsAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Errors",
+        "Threshold": 1,
+        "Period": 60,
+        "EvaluationPeriods": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "OKActions": [],
+        "AlarmActions": [
+          {
+            "Ref": "AwsAlertsAlarmParameter"
+          }
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionParameter"
+            }
+          }
+        ],
+        "TreatMissingData": "missing",
+        "Statistic": "Sum"
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore29FunctionErrorsAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Errors",
+        "Threshold": 1,
+        "Period": 60,
+        "EvaluationPeriods": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "OKActions": [],
+        "AlarmActions": [
+          {
+            "Ref": "AwsAlertsAlarmParameter"
+          }
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter"
+            }
+          }
+        ],
+        "TreatMissingData": "missing",
+        "Statistic": "Sum"
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore8FunctionErrorsAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Errors",
+        "Threshold": 1,
+        "Period": 60,
+        "EvaluationPeriods": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "OKActions": [],
+        "AlarmActions": [
+          {
+            "Ref": "AwsAlertsAlarmParameter"
+          }
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionParameter"
             }
           }
         ],
@@ -200,6 +325,35 @@
       },
       "DependsOn": []
     },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29FunctionErrorsAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Errors",
+        "Threshold": 1,
+        "Period": 60,
+        "EvaluationPeriods": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "OKActions": [],
+        "AlarmActions": [
+          {
+            "Ref": "AwsAlertsAlarmParameter"
+          }
+        ],
+        "InsufficientDataActions": [],
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionParameter"
+            }
+          }
+        ],
+        "TreatMissingData": "missing",
+        "Statistic": "Sum"
+      },
+      "DependsOn": []
+    },
     "AlDashdailyDashtrafficUnderscorerefreshUnderscore8FunctionErrorsAlarm": {
       "Type": "AWS::CloudWatch::Alarm",
       "Properties": {
@@ -221,35 +375,6 @@
             "Name": "FunctionName",
             "Value": {
               "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionParameter"
-            }
-          }
-        ],
-        "TreatMissingData": "missing",
-        "Statistic": "Sum"
-      },
-      "DependsOn": []
-    },
-    "AlDashfrequencyFunctionErrorsAlarm": {
-      "Type": "AWS::CloudWatch::Alarm",
-      "Properties": {
-        "Namespace": "AWS/Lambda",
-        "MetricName": "Errors",
-        "Threshold": 1,
-        "Period": 60,
-        "EvaluationPeriods": 1,
-        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
-        "OKActions": [],
-        "AlarmActions": [
-          {
-            "Ref": "AwsAlertsAlarmParameter"
-          }
-        ],
-        "InsufficientDataActions": [],
-        "Dimensions": [
-          {
-            "Name": "FunctionName",
-            "Value": {
-              "Ref": "AlDashfrequencyLambdaFunctionParameter"
             }
           }
         ],
@@ -374,7 +499,7 @@
       },
       "DependsOn": []
     },
-    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29FunctionErrorsAlarm": {
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore8FunctionErrorsAlarm": {
       "Type": "AWS::CloudWatch::Alarm",
       "Properties": {
         "Namespace": "AWS/Lambda",
@@ -394,7 +519,7 @@
           {
             "Name": "FunctionName",
             "Value": {
-              "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionParameter"
+              "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunctionParameter"
             }
           }
         ],
@@ -403,7 +528,7 @@
       },
       "DependsOn": []
     },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore8FunctionErrorsAlarm": {
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore15FunctionErrorsAlarm": {
       "Type": "AWS::CloudWatch::Alarm",
       "Properties": {
         "Namespace": "AWS/Lambda",
@@ -423,7 +548,7 @@
           {
             "Name": "FunctionName",
             "Value": {
-              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionParameter"
+              "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunctionParameter"
             }
           }
         ],
@@ -432,7 +557,7 @@
       },
       "DependsOn": []
     },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore15FunctionErrorsAlarm": {
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore22FunctionErrorsAlarm": {
       "Type": "AWS::CloudWatch::Alarm",
       "Properties": {
         "Namespace": "AWS/Lambda",
@@ -452,7 +577,7 @@
           {
             "Name": "FunctionName",
             "Value": {
-              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionParameter"
+              "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunctionParameter"
             }
           }
         ],
@@ -461,7 +586,7 @@
       },
       "DependsOn": []
     },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore22FunctionErrorsAlarm": {
+    "AlDashvisitorDashflowUnderscorerefreshUnderscore29FunctionErrorsAlarm": {
       "Type": "AWS::CloudWatch::Alarm",
       "Properties": {
         "Namespace": "AWS/Lambda",
@@ -481,36 +606,7 @@
           {
             "Name": "FunctionName",
             "Value": {
-              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionParameter"
-            }
-          }
-        ],
-        "TreatMissingData": "missing",
-        "Statistic": "Sum"
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore29FunctionErrorsAlarm": {
-      "Type": "AWS::CloudWatch::Alarm",
-      "Properties": {
-        "Namespace": "AWS/Lambda",
-        "MetricName": "Errors",
-        "Threshold": 1,
-        "Period": 60,
-        "EvaluationPeriods": 1,
-        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
-        "OKActions": [],
-        "AlarmActions": [
-          {
-            "Ref": "AwsAlertsAlarmParameter"
-          }
-        ],
-        "InsufficientDataActions": [],
-        "Dimensions": [
-          {
-            "Name": "FunctionName",
-            "Value": {
-              "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter"
+              "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionParameter"
             }
           }
         ],

@@ -175,17 +175,38 @@
             },
             "DependsOn": []
           },
-          "AlDashfrequencyLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-frequency"
-            },
-            "DependsOn": []
-          },
           "AlDashvisitorDashflowLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
               "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-visitor-flow"
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore8LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-visitor-flow_refresh_8"
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore15LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-visitor-flow_refresh_15"
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore22LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-visitor-flow_refresh_22"
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore29LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-visitor-flow_refresh_29"
             },
             "DependsOn": []
           },
@@ -203,6 +224,34 @@
             },
             "DependsOn": []
           },
+          "AlDashsocialwifiUnderscorerefreshUnderscore8LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-socialwifi_refresh_8"
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore15LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-socialwifi_refresh_15"
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore22LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-socialwifi_refresh_22"
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore29LogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-al-socialwifi_refresh_29"
+            },
+            "DependsOn": []
+          },
           "GfDashgiftcardDashtransactionLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
@@ -214,41 +263,6 @@
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
               "LogGroupName": "/aws/lambda/cf-domo-loader-dev-gf-giftcard-info"
-            },
-            "DependsOn": []
-          },
-          "ScheduleDashsalesDashctiDashcategoryLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-schedule-sales-cti-category"
-            },
-            "DependsOn": []
-          },
-          "ScheduleDashsalesDashctiDashprojectLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-schedule-sales-cti-project"
-            },
-            "DependsOn": []
-          },
-          "ScheduleDashsalesDashctiDashspaceLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-schedule-sales-cti-space"
-            },
-            "DependsOn": []
-          },
-          "ScheduleDashsalesDashctiDashstoreLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-schedule-sales-cti-store"
-            },
-            "DependsOn": []
-          },
-          "ScheduleDashsalesDashctiDashtenantLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/cf-domo-loader-dev-schedule-sales-cti-tenant"
             },
             "DependsOn": []
           },
@@ -416,7 +430,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-transform",
               "Handler": "handlers/main.transform",
@@ -480,7 +494,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-load",
               "Handler": "handlers/main.load",
@@ -544,7 +558,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-extract",
               "Handler": "handlers/main.extract",
@@ -611,7 +625,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-traffic",
               "Handler": "scheduling/aislelabs_dashboard.getDailyTraffic",
@@ -676,7 +690,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-traffic_refresh_8",
               "Handler": "scheduling/aislelabs_dashboard.getDailyTraffic_refresh_8",
@@ -741,7 +755,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-traffic_refresh_15",
               "Handler": "scheduling/aislelabs_dashboard.getDailyTraffic_refresh_15",
@@ -806,7 +820,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-traffic_refresh_22",
               "Handler": "scheduling/aislelabs_dashboard.getDailyTraffic_refresh_22",
@@ -871,7 +885,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-traffic_refresh_29",
               "Handler": "scheduling/aislelabs_dashboard.getDailyTraffic_refresh_29",
@@ -936,7 +950,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-monthly-traffic",
               "Handler": "scheduling/aislelabs_dashboard.getMonthlyTraffic",
@@ -1001,7 +1015,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-dwell",
               "Handler": "scheduling/aislelabs_dashboard.getDailyDwell",
@@ -1066,7 +1080,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-dwell_refresh_8",
               "Handler": "scheduling/aislelabs_dashboard.getDailyDwell_refresh_8",
@@ -1131,7 +1145,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-dwell_refresh_15",
               "Handler": "scheduling/aislelabs_dashboard.getDailyDwell_refresh_15",
@@ -1196,7 +1210,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-dwell_refresh_22",
               "Handler": "scheduling/aislelabs_dashboard.getDailyDwell_refresh_22",
@@ -1261,7 +1275,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-daily-dwell_refresh_29",
               "Handler": "scheduling/aislelabs_dashboard.getDailyDwell_refresh_29",
@@ -1319,72 +1333,6 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AlDashfrequencyLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
-              },
-              "FunctionName": "cf-domo-loader-dev-al-frequency",
-              "Handler": "scheduling/aislelabs_frequency.get",
-              "MemorySize": 1024,
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              },
-              "Runtime": "nodejs10.x",
-              "Timeout": 30,
-              "Environment": {
-                "Variables": {
-                  "stage": "dev",
-                  "log_level": "info",
-                  "bouncedstreamid": -1,
-                  "newstreamid": -2,
-                  "totalstreamid": -3,
-                  "hourlyFilteredPropertyStreamId": -8,
-                  "hourlyFilteredSpaceStreamId": -9,
-                  "hourlyRawPropertyStreamId": -10,
-                  "hourlyRawSpaceStreamId": -11,
-                  "dailyFilteredPropertyStreamId": -4,
-                  "dailyFilteredSpaceStreamId": -5,
-                  "dailyRawPropertyStreamId": -6,
-                  "dailyRawSpaceStreamId": -7,
-                  "dailyPropertyDwellStreamId": -30,
-                  "dailySpaceDwellStreamId": -80,
-                  "dailyFloorStreamId": -55,
-                  "monthlyPropertyDwellStreamId": -31,
-                  "monthlySpaceDwellStreamId": -81,
-                  "monthlyFilteredPropertyStreamId": -40,
-                  "monthlyFilteredSpaceStreamId": -41,
-                  "monthlyRawPropertyStreamId": -42,
-                  "monthlyRawSpaceStreamId": -43,
-                  "frequencyStreamId": -12,
-                  "crossvisitorStreamId": -13,
-                  "merakiDevicesStatusStreamId": -15,
-                  "merakiDevicesStreamId": -14,
-                  "socialwifiStreamId": -17,
-                  "giftCardTransactionStreamId": -18,
-                  "giftCardInfoStreamId": -19,
-                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
-                  "dbuser": "domo",
-                  "dbpassword": "CFdomo!loader*_*",
-                  "dbname": "domoloader",
-                  "apikey": "efc5ffe26768428e101139aece9af70b",
-                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8",
-                  "ndays": 30
-                }
-              }
-            },
-            "DependsOn": [
-              "AlDashfrequencyLogGroup",
-              "IamRoleLambdaExecution"
-            ]
-          },
           "AlDashvisitorDashflowLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -1392,7 +1340,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-visitor-flow",
               "Handler": "scheduling/aislelabs_visitor_flow.get",
@@ -1450,6 +1398,266 @@
               "IamRoleLambdaExecution"
             ]
           },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-visitor-flow_refresh_8",
+              "Handler": "scheduling/aislelabs_visitor_flow.get_refresh_8",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore8LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-visitor-flow_refresh_15",
+              "Handler": "scheduling/aislelabs_visitor_flow.get_refresh_15",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore15LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-visitor-flow_refresh_22",
+              "Handler": "scheduling/aislelabs_visitor_flow.get_refresh_22",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore22LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-visitor-flow_refresh_29",
+              "Handler": "scheduling/aislelabs_visitor_flow.get_refresh_29",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore29LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
           "AlDashcrossvisitorLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -1457,7 +1665,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-crossvisitor",
               "Handler": "scheduling/aislelabs_crossvisitor.get",
@@ -1522,7 +1730,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-al-socialwifi",
               "Handler": "scheduling/aislelabs_socialwifi.get",
@@ -1580,6 +1788,266 @@
               "IamRoleLambdaExecution"
             ]
           },
+          "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-socialwifi_refresh_8",
+              "Handler": "scheduling/aislelabs_socialwifi.get_refresh_8",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashsocialwifiUnderscorerefreshUnderscore8LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-socialwifi_refresh_15",
+              "Handler": "scheduling/aislelabs_socialwifi.get_refresh_15",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashsocialwifiUnderscorerefreshUnderscore15LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-socialwifi_refresh_22",
+              "Handler": "scheduling/aislelabs_socialwifi.get_refresh_22",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashsocialwifiUnderscorerefreshUnderscore22LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
+              },
+              "FunctionName": "cf-domo-loader-dev-al-socialwifi_refresh_29",
+              "Handler": "scheduling/aislelabs_socialwifi.get_refresh_29",
+              "MemorySize": 1024,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs10.x",
+              "Timeout": 30,
+              "Environment": {
+                "Variables": {
+                  "stage": "dev",
+                  "log_level": "info",
+                  "bouncedstreamid": -1,
+                  "newstreamid": -2,
+                  "totalstreamid": -3,
+                  "hourlyFilteredPropertyStreamId": -8,
+                  "hourlyFilteredSpaceStreamId": -9,
+                  "hourlyRawPropertyStreamId": -10,
+                  "hourlyRawSpaceStreamId": -11,
+                  "dailyFilteredPropertyStreamId": -4,
+                  "dailyFilteredSpaceStreamId": -5,
+                  "dailyRawPropertyStreamId": -6,
+                  "dailyRawSpaceStreamId": -7,
+                  "dailyPropertyDwellStreamId": -30,
+                  "dailySpaceDwellStreamId": -80,
+                  "dailyFloorStreamId": -55,
+                  "monthlyPropertyDwellStreamId": -31,
+                  "monthlySpaceDwellStreamId": -81,
+                  "monthlyFilteredPropertyStreamId": -40,
+                  "monthlyFilteredSpaceStreamId": -41,
+                  "monthlyRawPropertyStreamId": -42,
+                  "monthlyRawSpaceStreamId": -43,
+                  "frequencyStreamId": -12,
+                  "crossvisitorStreamId": -13,
+                  "merakiDevicesStatusStreamId": -15,
+                  "merakiDevicesStreamId": -14,
+                  "socialwifiStreamId": -17,
+                  "giftCardTransactionStreamId": -18,
+                  "giftCardInfoStreamId": -19,
+                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
+                  "dbuser": "domo",
+                  "dbpassword": "CFdomo!loader*_*",
+                  "dbname": "domoloader",
+                  "apikey": "efc5ffe26768428e101139aece9af70b",
+                  "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+                }
+              }
+            },
+            "DependsOn": [
+              "AlDashsocialwifiUnderscorerefreshUnderscore29LogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
           "GfDashgiftcardDashtransactionLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -1587,7 +2055,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-gf-giftcard-transaction",
               "Handler": "scheduling/s3_gift_cards.getGiftCardTransaction",
@@ -1650,7 +2118,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-gf-giftcard-info",
               "Handler": "scheduling/s3_gift_cards.getGiftCardInfo",
@@ -1706,321 +2174,6 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ScheduleDashsalesDashctiDashcategoryLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
-              },
-              "FunctionName": "cf-domo-loader-dev-schedule-sales-cti-category",
-              "Handler": "scheduling/s3_sales.schedule_cti_category",
-              "MemorySize": 1024,
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              },
-              "Runtime": "nodejs10.x",
-              "Timeout": 30,
-              "Environment": {
-                "Variables": {
-                  "stage": "dev",
-                  "log_level": "info",
-                  "bouncedstreamid": -1,
-                  "newstreamid": -2,
-                  "totalstreamid": -3,
-                  "hourlyFilteredPropertyStreamId": -8,
-                  "hourlyFilteredSpaceStreamId": -9,
-                  "hourlyRawPropertyStreamId": -10,
-                  "hourlyRawSpaceStreamId": -11,
-                  "dailyFilteredPropertyStreamId": -4,
-                  "dailyFilteredSpaceStreamId": -5,
-                  "dailyRawPropertyStreamId": -6,
-                  "dailyRawSpaceStreamId": -7,
-                  "dailyPropertyDwellStreamId": -30,
-                  "dailySpaceDwellStreamId": -80,
-                  "dailyFloorStreamId": -55,
-                  "monthlyPropertyDwellStreamId": -31,
-                  "monthlySpaceDwellStreamId": -81,
-                  "monthlyFilteredPropertyStreamId": -40,
-                  "monthlyFilteredSpaceStreamId": -41,
-                  "monthlyRawPropertyStreamId": -42,
-                  "monthlyRawSpaceStreamId": -43,
-                  "frequencyStreamId": -12,
-                  "crossvisitorStreamId": -13,
-                  "merakiDevicesStatusStreamId": -15,
-                  "merakiDevicesStreamId": -14,
-                  "socialwifiStreamId": -17,
-                  "giftCardTransactionStreamId": -18,
-                  "giftCardInfoStreamId": -19,
-                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
-                  "dbuser": "domo",
-                  "dbpassword": "CFdomo!loader*_*",
-                  "dbname": "domoloader"
-                }
-              }
-            },
-            "DependsOn": [
-              "ScheduleDashsalesDashctiDashcategoryLogGroup",
-              "IamRoleLambdaExecution"
-            ]
-          },
-          "ScheduleDashsalesDashctiDashprojectLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
-              },
-              "FunctionName": "cf-domo-loader-dev-schedule-sales-cti-project",
-              "Handler": "scheduling/s3_sales.schedule_cti_project",
-              "MemorySize": 1024,
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              },
-              "Runtime": "nodejs10.x",
-              "Timeout": 30,
-              "Environment": {
-                "Variables": {
-                  "stage": "dev",
-                  "log_level": "info",
-                  "bouncedstreamid": -1,
-                  "newstreamid": -2,
-                  "totalstreamid": -3,
-                  "hourlyFilteredPropertyStreamId": -8,
-                  "hourlyFilteredSpaceStreamId": -9,
-                  "hourlyRawPropertyStreamId": -10,
-                  "hourlyRawSpaceStreamId": -11,
-                  "dailyFilteredPropertyStreamId": -4,
-                  "dailyFilteredSpaceStreamId": -5,
-                  "dailyRawPropertyStreamId": -6,
-                  "dailyRawSpaceStreamId": -7,
-                  "dailyPropertyDwellStreamId": -30,
-                  "dailySpaceDwellStreamId": -80,
-                  "dailyFloorStreamId": -55,
-                  "monthlyPropertyDwellStreamId": -31,
-                  "monthlySpaceDwellStreamId": -81,
-                  "monthlyFilteredPropertyStreamId": -40,
-                  "monthlyFilteredSpaceStreamId": -41,
-                  "monthlyRawPropertyStreamId": -42,
-                  "monthlyRawSpaceStreamId": -43,
-                  "frequencyStreamId": -12,
-                  "crossvisitorStreamId": -13,
-                  "merakiDevicesStatusStreamId": -15,
-                  "merakiDevicesStreamId": -14,
-                  "socialwifiStreamId": -17,
-                  "giftCardTransactionStreamId": -18,
-                  "giftCardInfoStreamId": -19,
-                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
-                  "dbuser": "domo",
-                  "dbpassword": "CFdomo!loader*_*",
-                  "dbname": "domoloader"
-                }
-              }
-            },
-            "DependsOn": [
-              "ScheduleDashsalesDashctiDashprojectLogGroup",
-              "IamRoleLambdaExecution"
-            ]
-          },
-          "ScheduleDashsalesDashctiDashspaceLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
-              },
-              "FunctionName": "cf-domo-loader-dev-schedule-sales-cti-space",
-              "Handler": "scheduling/s3_sales.schedule_cti_space",
-              "MemorySize": 1024,
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              },
-              "Runtime": "nodejs10.x",
-              "Timeout": 30,
-              "Environment": {
-                "Variables": {
-                  "stage": "dev",
-                  "log_level": "info",
-                  "bouncedstreamid": -1,
-                  "newstreamid": -2,
-                  "totalstreamid": -3,
-                  "hourlyFilteredPropertyStreamId": -8,
-                  "hourlyFilteredSpaceStreamId": -9,
-                  "hourlyRawPropertyStreamId": -10,
-                  "hourlyRawSpaceStreamId": -11,
-                  "dailyFilteredPropertyStreamId": -4,
-                  "dailyFilteredSpaceStreamId": -5,
-                  "dailyRawPropertyStreamId": -6,
-                  "dailyRawSpaceStreamId": -7,
-                  "dailyPropertyDwellStreamId": -30,
-                  "dailySpaceDwellStreamId": -80,
-                  "dailyFloorStreamId": -55,
-                  "monthlyPropertyDwellStreamId": -31,
-                  "monthlySpaceDwellStreamId": -81,
-                  "monthlyFilteredPropertyStreamId": -40,
-                  "monthlyFilteredSpaceStreamId": -41,
-                  "monthlyRawPropertyStreamId": -42,
-                  "monthlyRawSpaceStreamId": -43,
-                  "frequencyStreamId": -12,
-                  "crossvisitorStreamId": -13,
-                  "merakiDevicesStatusStreamId": -15,
-                  "merakiDevicesStreamId": -14,
-                  "socialwifiStreamId": -17,
-                  "giftCardTransactionStreamId": -18,
-                  "giftCardInfoStreamId": -19,
-                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
-                  "dbuser": "domo",
-                  "dbpassword": "CFdomo!loader*_*",
-                  "dbname": "domoloader"
-                }
-              }
-            },
-            "DependsOn": [
-              "ScheduleDashsalesDashctiDashspaceLogGroup",
-              "IamRoleLambdaExecution"
-            ]
-          },
-          "ScheduleDashsalesDashctiDashstoreLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
-              },
-              "FunctionName": "cf-domo-loader-dev-schedule-sales-cti-store",
-              "Handler": "scheduling/s3_sales.schedule_cti_store",
-              "MemorySize": 1024,
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              },
-              "Runtime": "nodejs10.x",
-              "Timeout": 30,
-              "Environment": {
-                "Variables": {
-                  "stage": "dev",
-                  "log_level": "info",
-                  "bouncedstreamid": -1,
-                  "newstreamid": -2,
-                  "totalstreamid": -3,
-                  "hourlyFilteredPropertyStreamId": -8,
-                  "hourlyFilteredSpaceStreamId": -9,
-                  "hourlyRawPropertyStreamId": -10,
-                  "hourlyRawSpaceStreamId": -11,
-                  "dailyFilteredPropertyStreamId": -4,
-                  "dailyFilteredSpaceStreamId": -5,
-                  "dailyRawPropertyStreamId": -6,
-                  "dailyRawSpaceStreamId": -7,
-                  "dailyPropertyDwellStreamId": -30,
-                  "dailySpaceDwellStreamId": -80,
-                  "dailyFloorStreamId": -55,
-                  "monthlyPropertyDwellStreamId": -31,
-                  "monthlySpaceDwellStreamId": -81,
-                  "monthlyFilteredPropertyStreamId": -40,
-                  "monthlyFilteredSpaceStreamId": -41,
-                  "monthlyRawPropertyStreamId": -42,
-                  "monthlyRawSpaceStreamId": -43,
-                  "frequencyStreamId": -12,
-                  "crossvisitorStreamId": -13,
-                  "merakiDevicesStatusStreamId": -15,
-                  "merakiDevicesStreamId": -14,
-                  "socialwifiStreamId": -17,
-                  "giftCardTransactionStreamId": -18,
-                  "giftCardInfoStreamId": -19,
-                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
-                  "dbuser": "domo",
-                  "dbpassword": "CFdomo!loader*_*",
-                  "dbname": "domoloader"
-                }
-              }
-            },
-            "DependsOn": [
-              "ScheduleDashsalesDashctiDashstoreLogGroup",
-              "IamRoleLambdaExecution"
-            ]
-          },
-          "ScheduleDashsalesDashctiDashtenantLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
-              },
-              "FunctionName": "cf-domo-loader-dev-schedule-sales-cti-tenant",
-              "Handler": "scheduling/s3_sales.schedule_cti_tenant",
-              "MemorySize": 1024,
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              },
-              "Runtime": "nodejs10.x",
-              "Timeout": 30,
-              "Environment": {
-                "Variables": {
-                  "stage": "dev",
-                  "log_level": "info",
-                  "bouncedstreamid": -1,
-                  "newstreamid": -2,
-                  "totalstreamid": -3,
-                  "hourlyFilteredPropertyStreamId": -8,
-                  "hourlyFilteredSpaceStreamId": -9,
-                  "hourlyRawPropertyStreamId": -10,
-                  "hourlyRawSpaceStreamId": -11,
-                  "dailyFilteredPropertyStreamId": -4,
-                  "dailyFilteredSpaceStreamId": -5,
-                  "dailyRawPropertyStreamId": -6,
-                  "dailyRawSpaceStreamId": -7,
-                  "dailyPropertyDwellStreamId": -30,
-                  "dailySpaceDwellStreamId": -80,
-                  "dailyFloorStreamId": -55,
-                  "monthlyPropertyDwellStreamId": -31,
-                  "monthlySpaceDwellStreamId": -81,
-                  "monthlyFilteredPropertyStreamId": -40,
-                  "monthlyFilteredSpaceStreamId": -41,
-                  "monthlyRawPropertyStreamId": -42,
-                  "monthlyRawSpaceStreamId": -43,
-                  "frequencyStreamId": -12,
-                  "crossvisitorStreamId": -13,
-                  "merakiDevicesStatusStreamId": -15,
-                  "merakiDevicesStreamId": -14,
-                  "socialwifiStreamId": -17,
-                  "giftCardTransactionStreamId": -18,
-                  "giftCardInfoStreamId": -19,
-                  "dbhost": "domoloaderdb.c3gfjl5i1amd.us-west-2.rds.amazonaws.com",
-                  "dbuser": "domo",
-                  "dbpassword": "CFdomo!loader*_*",
-                  "dbname": "domoloader"
-                }
-              }
-            },
-            "DependsOn": [
-              "ScheduleDashsalesDashctiDashtenantLogGroup",
-              "IamRoleLambdaExecution"
-            ]
-          },
           "ScheduleDashsalesDashctiDashunitLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -2028,7 +2181,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-schedule-sales-cti-unit",
               "Handler": "scheduling/s3_sales.schedule_cti_unit",
@@ -2091,7 +2244,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-schedule-sales-rcis-category",
               "Handler": "scheduling/s3_sales.schedule_rcis_category",
@@ -2154,7 +2307,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-cti-category",
               "Handler": "scheduling/s3_sales.backfill_cti_category",
@@ -2217,7 +2370,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-cti-project",
               "Handler": "scheduling/s3_sales.backfill_cti_project",
@@ -2280,7 +2433,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-cti-space",
               "Handler": "scheduling/s3_sales.backfill_cti_space",
@@ -2343,7 +2496,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-cti-store",
               "Handler": "scheduling/s3_sales.backfill_cti_store",
@@ -2406,7 +2559,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-cti-tenant",
               "Handler": "scheduling/s3_sales.backfill_cti_tenant",
@@ -2469,7 +2622,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-cti-unit",
               "Handler": "scheduling/s3_sales.backfill_cti_unit",
@@ -2532,7 +2685,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-backfill-sales-rcis-category",
               "Handler": "scheduling/s3_sales.backfill_rcis_category",
@@ -2595,7 +2748,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-meraki-devices",
               "Handler": "scheduling/meraki.getDevices",
@@ -2659,7 +2812,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z/cf-domo-loader.zip"
+                "S3Key": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z/cf-domo-loader.zip"
               },
               "FunctionName": "cf-domo-loader-dev-meraki-devices-status",
               "Handler": "scheduling/meraki.getDevicesStatus",
@@ -2738,7 +2891,7 @@
           "AlDashdailyDashtrafficUnderscorerefreshUnderscore8EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(30 13 * * ? *)",
+              "ScheduleExpression": "cron(0 0 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2757,7 +2910,7 @@
           "AlDashdailyDashtrafficUnderscorerefreshUnderscore15EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(0 14 * * ? *)",
+              "ScheduleExpression": "cron(30 00 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2776,7 +2929,7 @@
           "AlDashdailyDashtrafficUnderscorerefreshUnderscore22EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(30 14 * * ? *)",
+              "ScheduleExpression": "cron(00 1 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2795,7 +2948,7 @@
           "AlDashdailyDashtrafficUnderscorerefreshUnderscore29EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(00 15 * * ? *)",
+              "ScheduleExpression": "cron(30 1 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2852,7 +3005,7 @@
           "AlDashdailyDashdwellUnderscorerefreshUnderscore8EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(30 15 * * ? *)",
+              "ScheduleExpression": "cron(00 2 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2871,7 +3024,7 @@
           "AlDashdailyDashdwellUnderscorerefreshUnderscore15EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(0 16 * * ? *)",
+              "ScheduleExpression": "cron(30 2 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2890,7 +3043,7 @@
           "AlDashdailyDashdwellUnderscorerefreshUnderscore22EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(30 16 * * ? *)",
+              "ScheduleExpression": "cron(00 3 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2909,7 +3062,7 @@
           "AlDashdailyDashdwellUnderscorerefreshUnderscore29EventsRuleSchedule1": {
             "Type": "AWS::Events::Rule",
             "Properties": {
-              "ScheduleExpression": "cron(0 17 * * ? *)",
+              "ScheduleExpression": "cron(30 3 * * ? *)",
               "State": "ENABLED",
               "Targets": [
                 {
@@ -2939,6 +3092,82 @@
                     ]
                   },
                   "Id": "al-visitor-flowSchedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore8EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(00 4 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-visitor-flow_refresh_8Schedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore15EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(30 4 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-visitor-flow_refresh_15Schedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore22EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(00 5 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-visitor-flow_refresh_22Schedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore29EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(30 5 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-visitor-flow_refresh_29Schedule"
                 }
               ]
             },
@@ -2977,6 +3206,82 @@
                     ]
                   },
                   "Id": "al-socialwifiSchedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(00 13 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-socialwifi_refresh_8Schedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore15EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(00 14 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-socialwifi_refresh_15Schedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore22EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(00 15 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-socialwifi_refresh_22Schedule"
+                }
+              ]
+            },
+            "DependsOn": []
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore29EventsRuleSchedule1": {
+            "Type": "AWS::Events::Rule",
+            "Properties": {
+              "ScheduleExpression": "cron(00 16 * * ? *)",
+              "State": "ENABLED",
+              "Targets": [
+                {
+                  "Arn": {
+                    "Fn::GetAtt": [
+                      "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction",
+                      "Arn"
+                    ]
+                  },
+                  "Id": "al-socialwifi_refresh_29Schedule"
                 }
               ]
             },
@@ -3176,58 +3481,6 @@
               "APINestedStack"
             ]
           },
-          "ApiGatewayMethodV1AislelabsFrequencyGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayResourceV1AislelabsFrequency"
-                ]
-              },
-              "RestApiId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayRestApi"
-                ]
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "AlDashfrequencyLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "APINestedStack"
-            ]
-          },
           "ApiGatewayMethodV1AislelabsVisitorflowGet": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -3265,7 +3518,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "AlDashvisitorDashflowLambdaFunction",
+                          "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction",
                           "Arn"
                         ]
                       },
@@ -3369,7 +3622,7 @@
                       ":lambda:path/2015-03-31/functions/",
                       {
                         "Fn::GetAtt": [
-                          "AlDashsocialwifiLambdaFunction",
+                          "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction",
                           "Arn"
                         ]
                       },
@@ -3474,266 +3727,6 @@
                       {
                         "Fn::GetAtt": [
                           "GfDashgiftcardDashinfoLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "APINestedStack"
-            ]
-          },
-          "ApiGatewayMethodV1SchedulesalescticategoryGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayResourceV1Schedulesalescticategory"
-                ]
-              },
-              "RestApiId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayRestApi"
-                ]
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ScheduleDashsalesDashctiDashcategoryLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "APINestedStack"
-            ]
-          },
-          "ApiGatewayMethodV1SchedulesalesctiprojectGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayResourceV1Schedulesalesctiproject"
-                ]
-              },
-              "RestApiId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayRestApi"
-                ]
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ScheduleDashsalesDashctiDashprojectLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "APINestedStack"
-            ]
-          },
-          "ApiGatewayMethodV1SchedulesalesctispaceGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayResourceV1Schedulesalesctispace"
-                ]
-              },
-              "RestApiId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayRestApi"
-                ]
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ScheduleDashsalesDashctiDashspaceLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "APINestedStack"
-            ]
-          },
-          "ApiGatewayMethodV1SchedulesalesctistoreGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayResourceV1Schedulesalesctistore"
-                ]
-              },
-              "RestApiId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayRestApi"
-                ]
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ScheduleDashsalesDashctiDashstoreLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "APINestedStack"
-            ]
-          },
-          "ApiGatewayMethodV1SchedulesalesctitenantGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayResourceV1Schedulesalesctitenant"
-                ]
-              },
-              "RestApiId": {
-                "Fn::GetAtt": [
-                  "APINestedStack",
-                  "Outputs.ApiGatewayRestApi"
-                ]
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ScheduleDashsalesDashctiDashtenantLambdaFunction",
                           "Arn"
                         ]
                       },
@@ -4320,7 +4313,7 @@
               "APINestedStack"
             ]
           },
-          "ApiGatewayDeployment1565187848939": {
+          "ApiGatewayDeployment1565742785422": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -4335,17 +4328,11 @@
               "ApiGatewayMethodV1AislelabsDailytrafficGet",
               "ApiGatewayMethodV1AislelabsMonthlytrafficGet",
               "ApiGatewayMethodV1AislelabsDailydwellGet",
-              "ApiGatewayMethodV1AislelabsFrequencyGet",
               "ApiGatewayMethodV1AislelabsVisitorflowGet",
               "ApiGatewayMethodV1AislelabsCrossvisitorGet",
               "ApiGatewayMethodV1AislelabsSocialwifiGet",
               "ApiGatewayMethodV1GiftcardGiftcardtransactionGet",
               "ApiGatewayMethodV1GiftcardGiftcardinfoGet",
-              "ApiGatewayMethodV1SchedulesalescticategoryGet",
-              "ApiGatewayMethodV1SchedulesalesctiprojectGet",
-              "ApiGatewayMethodV1SchedulesalesctispaceGet",
-              "ApiGatewayMethodV1SchedulesalesctistoreGet",
-              "ApiGatewayMethodV1SchedulesalesctitenantGet",
               "ApiGatewayMethodV1SchedulesalesctiunitGet",
               "ApiGatewayMethodV1SchedulesalesrciscategoryGet",
               "ApiGatewayMethodV1BackfillsalescticategoryGet",
@@ -4473,11 +4460,20 @@
                 "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter": {
                   "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunction"
                 },
-                "AlDashfrequencyLambdaFunctionParameter": {
-                  "Ref": "AlDashfrequencyLambdaFunction"
-                },
                 "AlDashvisitorDashflowLambdaFunctionParameter": {
                   "Ref": "AlDashvisitorDashflowLambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction"
                 },
                 "AlDashcrossvisitorLambdaFunctionParameter": {
                   "Ref": "AlDashcrossvisitorLambdaFunction"
@@ -4497,7 +4493,7 @@
                     {
                       "Ref": "ServerlessDeploymentBucket"
                     },
-                    "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z",
+                    "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z",
                     "cloudformation-template-Alarms-nested-stack.json"
                   ]
                 ]
@@ -4516,8 +4512,11 @@
               "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunction",
               "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunction",
               "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunction",
-              "AlDashfrequencyLambdaFunction",
               "AlDashvisitorDashflowLambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction",
               "AlDashcrossvisitorLambdaFunction",
               "MerakiDashdevicesLambdaFunction",
               "MerakiDashdevicesDashstatusLambdaFunction"
@@ -4535,7 +4534,7 @@
                     {
                       "Ref": "ServerlessDeploymentBucket"
                     },
-                    "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z",
+                    "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z",
                     "cloudformation-template-API-nested-stack.json"
                   ]
                 ]
@@ -4690,6 +4689,54 @@
                     "Arn"
                   ]
                 },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore8EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore15EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore15EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore22EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore22EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore29EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore29EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction",
+                    "Arn"
+                  ]
+                },
                 "AlDashcrossvisitorEventsRuleSchedule1ArnParameter": {
                   "Fn::GetAtt": [
                     "AlDashcrossvisitorEventsRuleSchedule1",
@@ -4711,6 +4758,54 @@
                 "AlDashsocialwifiLambdaFunctionArnParameter": {
                   "Fn::GetAtt": [
                     "AlDashsocialwifiLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore15EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore15EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore22EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore22EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore29EventsRuleSchedule1ArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore29EventsRuleSchedule1",
+                    "Arn"
+                  ]
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunctionArnParameter": {
+                  "Fn::GetAtt": [
+                    "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction",
                     "Arn"
                   ]
                 },
@@ -4742,42 +4837,6 @@
                   "Fn::GetAtt": [
                     "APINestedStack",
                     "Outputs.ApiGatewayRestApi"
-                  ]
-                },
-                "AlDashfrequencyLambdaFunctionArnParameter": {
-                  "Fn::GetAtt": [
-                    "AlDashfrequencyLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "ScheduleDashsalesDashctiDashcategoryLambdaFunctionArnParameter": {
-                  "Fn::GetAtt": [
-                    "ScheduleDashsalesDashctiDashcategoryLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "ScheduleDashsalesDashctiDashprojectLambdaFunctionArnParameter": {
-                  "Fn::GetAtt": [
-                    "ScheduleDashsalesDashctiDashprojectLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "ScheduleDashsalesDashctiDashspaceLambdaFunctionArnParameter": {
-                  "Fn::GetAtt": [
-                    "ScheduleDashsalesDashctiDashspaceLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "ScheduleDashsalesDashctiDashstoreLambdaFunctionArnParameter": {
-                  "Fn::GetAtt": [
-                    "ScheduleDashsalesDashctiDashstoreLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "ScheduleDashsalesDashctiDashtenantLambdaFunctionArnParameter": {
-                  "Fn::GetAtt": [
-                    "ScheduleDashsalesDashctiDashtenantLambdaFunction",
-                    "Arn"
                   ]
                 },
                 "ScheduleDashsalesDashctiDashunitLambdaFunctionArnParameter": {
@@ -4855,7 +4914,7 @@
                     {
                       "Ref": "ServerlessDeploymentBucket"
                     },
-                    "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z",
+                    "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z",
                     "cloudformation-template-Permissions-nested-stack.json"
                   ]
                 ]
@@ -4886,21 +4945,31 @@
               "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunction",
               "AlDashvisitorDashflowEventsRuleSchedule1",
               "AlDashvisitorDashflowLambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore8EventsRuleSchedule1",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore15EventsRuleSchedule1",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore22EventsRuleSchedule1",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore29EventsRuleSchedule1",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction",
               "AlDashcrossvisitorEventsRuleSchedule1",
               "AlDashcrossvisitorLambdaFunction",
               "AlDashsocialwifiEventsRuleSchedule1",
               "AlDashsocialwifiLambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1",
+              "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore15EventsRuleSchedule1",
+              "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore22EventsRuleSchedule1",
+              "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore29EventsRuleSchedule1",
+              "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction",
               "GfDashgiftcardDashtransactionEventsRuleSchedule1",
               "GfDashgiftcardDashtransactionLambdaFunction",
               "GfDashgiftcardDashinfoEventsRuleSchedule1",
               "GfDashgiftcardDashinfoLambdaFunction",
               "APINestedStack",
-              "AlDashfrequencyLambdaFunction",
-              "ScheduleDashsalesDashctiDashcategoryLambdaFunction",
-              "ScheduleDashsalesDashctiDashprojectLambdaFunction",
-              "ScheduleDashsalesDashctiDashspaceLambdaFunction",
-              "ScheduleDashsalesDashctiDashstoreLambdaFunction",
-              "ScheduleDashsalesDashctiDashtenantLambdaFunction",
               "ScheduleDashsalesDashctiDashunitLambdaFunction",
               "ScheduleDashsalesDashrcisDashcategoryLambdaFunction",
               "BackfillDashsalesDashctiDashcategoryLambdaFunction",
@@ -4960,11 +5029,20 @@
                 "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionParameter": {
                   "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunction"
                 },
-                "AlDashfrequencyLambdaFunctionParameter": {
-                  "Ref": "AlDashfrequencyLambdaFunction"
-                },
                 "AlDashvisitorDashflowLambdaFunctionParameter": {
                   "Ref": "AlDashvisitorDashflowLambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction"
+                },
+                "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionParameter": {
+                  "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction"
                 },
                 "AlDashcrossvisitorLambdaFunctionParameter": {
                   "Ref": "AlDashcrossvisitorLambdaFunction"
@@ -4972,26 +5050,23 @@
                 "AlDashsocialwifiLambdaFunctionParameter": {
                   "Ref": "AlDashsocialwifiLambdaFunction"
                 },
+                "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionParameter": {
+                  "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunction"
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunctionParameter": {
+                  "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunction"
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunctionParameter": {
+                  "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunction"
+                },
+                "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunctionParameter": {
+                  "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction"
+                },
                 "GfDashgiftcardDashtransactionLambdaFunctionParameter": {
                   "Ref": "GfDashgiftcardDashtransactionLambdaFunction"
                 },
                 "GfDashgiftcardDashinfoLambdaFunctionParameter": {
                   "Ref": "GfDashgiftcardDashinfoLambdaFunction"
-                },
-                "ScheduleDashsalesDashctiDashcategoryLambdaFunctionParameter": {
-                  "Ref": "ScheduleDashsalesDashctiDashcategoryLambdaFunction"
-                },
-                "ScheduleDashsalesDashctiDashprojectLambdaFunctionParameter": {
-                  "Ref": "ScheduleDashsalesDashctiDashprojectLambdaFunction"
-                },
-                "ScheduleDashsalesDashctiDashspaceLambdaFunctionParameter": {
-                  "Ref": "ScheduleDashsalesDashctiDashspaceLambdaFunction"
-                },
-                "ScheduleDashsalesDashctiDashstoreLambdaFunctionParameter": {
-                  "Ref": "ScheduleDashsalesDashctiDashstoreLambdaFunction"
-                },
-                "ScheduleDashsalesDashctiDashtenantLambdaFunctionParameter": {
-                  "Ref": "ScheduleDashsalesDashctiDashtenantLambdaFunction"
                 },
                 "ScheduleDashsalesDashctiDashunitLambdaFunctionParameter": {
                   "Ref": "ScheduleDashsalesDashctiDashunitLambdaFunction"
@@ -5035,7 +5110,7 @@
                     {
                       "Ref": "ServerlessDeploymentBucket"
                     },
-                    "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z",
+                    "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z",
                     "cloudformation-template-Versions-nested-stack.json"
                   ]
                 ]
@@ -5056,17 +5131,19 @@
               "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunction",
               "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunction",
               "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunction",
-              "AlDashfrequencyLambdaFunction",
               "AlDashvisitorDashflowLambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunction",
+              "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunction",
               "AlDashcrossvisitorLambdaFunction",
               "AlDashsocialwifiLambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunction",
+              "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunction",
               "GfDashgiftcardDashtransactionLambdaFunction",
               "GfDashgiftcardDashinfoLambdaFunction",
-              "ScheduleDashsalesDashctiDashcategoryLambdaFunction",
-              "ScheduleDashsalesDashctiDashprojectLambdaFunction",
-              "ScheduleDashsalesDashctiDashspaceLambdaFunction",
-              "ScheduleDashsalesDashctiDashstoreLambdaFunction",
-              "ScheduleDashsalesDashctiDashtenantLambdaFunction",
               "ScheduleDashsalesDashctiDashunitLambdaFunction",
               "ScheduleDashsalesDashrcisDashcategoryLambdaFunction",
               "BackfillDashsalesDashctiDashcategoryLambdaFunction",
@@ -5092,7 +5169,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.TransformLambdaVersionBFdPZLR9G38pZpZtcfizkztbmN1VhvFkQCRSmLWDKw"
+                "Outputs.TransformLambdaVersionh75eBk1IJRqP2wbGyRjoZJSeryiISC7d4QXAyw2G0"
               ]
             }
           },
@@ -5101,7 +5178,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.LoadLambdaVersionvP9edj3ILJgti7k89GeagoCBAabq0j1i7noElVRtQZ0"
+                "Outputs.LoadLambdaVersionnjTkUOWWsCd9ofpsYHIGhLFBeiXoU8lDZ7Balaiwy0"
               ]
             }
           },
@@ -5110,7 +5187,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.ExtractLambdaVersionymUCCGGwTfqfZ4N44Due6e65mIKlvmjIzLrOEr1g"
+                "Outputs.ExtractLambdaVersionIALpQrbsMUy0TVXGavTi16VFBnoOc3YlGXqpCn6Zw"
               ]
             }
           },
@@ -5119,7 +5196,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashtrafficLambdaVersionKzzzhRpntE4dmkqCwT6plFDC3BTLcXwrEOBgvpIRIPU"
+                "Outputs.AlDashdailyDashtrafficLambdaVersionEidPRNlPfSctcsrCHvDG8NGGlTT3l9Qj3rrBv4Ib8"
               ]
             }
           },
@@ -5128,7 +5205,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaVersion9cs06voJe7r0UDm9PrTR5Q4HLEhRauZdP16X0zGKU"
+                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaVersionV3nf0pfBV2SasRXbxPQTuF2GNMRHeWMssFH1YUTvIOs"
               ]
             }
           },
@@ -5137,7 +5214,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaVersiondt4O2uRmb5i5dXgaWrcxgRCZ8YtPbA8bdZ1s9MVz7g"
+                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaVersionXtG89gv56c7y4pmDcAv7xHTFtH1zY4m72mQAb9qYfc"
               ]
             }
           },
@@ -5146,7 +5223,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaVersionGHcCLGewvkaqVRWuPD71bspCSXkH8Fag019cHbtysto"
+                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaVersion94gURHIB58rMd6pCnAfN87pRXePu3Rz8PPJBNvGs"
               ]
             }
           },
@@ -5155,7 +5232,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaVersionnjCzvoIRSgX9xuGP1QddxGXi8XmmxeFmCG9ZjL8xy3w"
+                "Outputs.AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaVersionH8vLyXdLgvYOw3knJJZURgC7pJ1ENbGGF0vvy41pkbQ"
               ]
             }
           },
@@ -5164,7 +5241,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashmonthlyDashtrafficLambdaVersionnCfFJl08LAltGbHiYT5Rx6tiFS4zWiaTnsKpcuwvqY"
+                "Outputs.AlDashmonthlyDashtrafficLambdaVersionzc47pMSgLtRfvTDQ7HEcZ2cl7HuYnyta9e4lZRTJ8k"
               ]
             }
           },
@@ -5173,7 +5250,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashdwellLambdaVersionk6H8RqS5H240mMpJ51FCpFsbNd3X3CO6pGCxhuzfPj4"
+                "Outputs.AlDashdailyDashdwellLambdaVersionLblf127eYbgCCtT0LMDsWnGc36nAEnwWM12HWxJus"
               ]
             }
           },
@@ -5182,7 +5259,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaVersionkRGUs2WjLFL0KWSCNvECP8zK6IDYTBJ0p3UwZHCgDDY"
+                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaVersionQwn6kEvak2rlr3iGA6KezBuL2fXKw8ZENFa0G1pDu2c"
               ]
             }
           },
@@ -5191,7 +5268,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaVersionMGCGQLGjPPvqJoypBBf1t9j6aa1h2UdIklG9nylhw"
+                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaVersionovSys8HbZkfCHVBmOkk1QJ7NMaF97TFBivFXhJ2Q"
               ]
             }
           },
@@ -5200,7 +5277,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaVersionitvFC1Pk3yZuhWw9U2WYeBzfv2f1q5cujehy62k"
+                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaVersionqhcjoZkg1WKK8HMjo693XVy80p8CzneiyZb0u1syzKA"
               ]
             }
           },
@@ -5209,16 +5286,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaVersionyVlbT9PVKl0DsKAgFft6pGSVqnGUT0u5Xc5CoROLgu4"
-              ]
-            }
-          },
-          "AlDashfrequencyLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Fn::GetAtt": [
-                "VersionsNestedStack",
-                "Outputs.AlDashfrequencyLambdaVersionMxUJDWssTjBGs7m9F6x2A3swXSoDyQhoww118JpOQs"
+                "Outputs.AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaVersionvDuriwvESe0nFbpqrTwIyGlWG27h32gi9m2bQ1P0"
               ]
             }
           },
@@ -5227,7 +5295,43 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashvisitorDashflowLambdaVersionibv2VI58bXjoVqJrrbcdB3cpQFqkSzmaFDcQwCQchk"
+                "Outputs.AlDashvisitorDashflowLambdaVersiontbF0bv8sEG0hq8M6JQg1A10M3WIeaippxj0FPxqADo"
+              ]
+            }
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashvisitorDashflowUnderscorerefreshUnderscore8LambdaVersione11tPsHGzrjTS4QKq5Kp49mqUYWM7yrIR5x13Endo"
+              ]
+            }
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashvisitorDashflowUnderscorerefreshUnderscore15LambdaVersiondUqRmuMP5UEvg5eTkwitdQsyUmY0spxpEctlwTXeU"
+              ]
+            }
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashvisitorDashflowUnderscorerefreshUnderscore22LambdaVersiongAACqOHEYt2YUFuAx51gcGvciO6kMLvY834Bry0EM"
+              ]
+            }
+          },
+          "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaVersiont5LbvI9lzScczm82ZOOEjDUXcq2hYdkMn1DblAm0E"
               ]
             }
           },
@@ -5236,7 +5340,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashcrossvisitorLambdaVersion3gTOVpndAmGeDGlM80uQoRg7L8fNEqHfbrtgvnQoU"
+                "Outputs.AlDashcrossvisitorLambdaVersionetozvl2YW9xiVD48MUUxfgLxduXFcYKf2K77zy2I"
               ]
             }
           },
@@ -5245,7 +5349,43 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.AlDashsocialwifiLambdaVersionm5OAWRfRRC0bcKJXLLMItaZhv5kfj3oLzmyhTiPS4ac"
+                "Outputs.AlDashsocialwifiLambdaVersion97AeTin47avKHqtiVu7lK9SyCqPWJqHPyS0SEGQnA"
+              ]
+            }
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashsocialwifiUnderscorerefreshUnderscore8LambdaVersionmREgRAeWh8NMA0CLVqvUef4mDzgSqrE2UNupXJwc06Q"
+              ]
+            }
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashsocialwifiUnderscorerefreshUnderscore15LambdaVersionljhxVgVPiRPBw5drCffphmdu1N6DQtAzvoqlBAX1bwY"
+              ]
+            }
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore22LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashsocialwifiUnderscorerefreshUnderscore22LambdaVersionOx2vrHTawTeFXlRS3DztTRGF3gy9yawQRZV3033XQ"
+              ]
+            }
+          },
+          "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Fn::GetAtt": [
+                "VersionsNestedStack",
+                "Outputs.AlDashsocialwifiUnderscorerefreshUnderscore29LambdaVersion6rM2YASc7tqzjTrQ1i4p4qHl6hYaTL0euWfKgxLTg"
               ]
             }
           },
@@ -5254,7 +5394,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.GfDashgiftcardDashtransactionLambdaVersionsdNG8VpYyXrl3SHzRthR0wW479CNkbUYHyC1K8MNE"
+                "Outputs.GfDashgiftcardDashtransactionLambdaVersioniQB9TB1YWSeUmYyzruu6CNWHjFEB56N1yHY1aJzLMX4"
               ]
             }
           },
@@ -5263,52 +5403,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.GfDashgiftcardDashinfoLambdaVersion1Te9f4f5ELA6x3ow9CLq7mWZV1ttjHl5rOcxIzkjM"
-              ]
-            }
-          },
-          "ScheduleDashsalesDashctiDashcategoryLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Fn::GetAtt": [
-                "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashctiDashcategoryLambdaVersionxPvmy9WZpUkkGMVfWdKGhRyWZmpno9YfZdgOI3K50bI"
-              ]
-            }
-          },
-          "ScheduleDashsalesDashctiDashprojectLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Fn::GetAtt": [
-                "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashctiDashprojectLambdaVersionPzJ3pXdUJWIM6jG0fuLZktug3g9kdtAP8cnhhNJt6E"
-              ]
-            }
-          },
-          "ScheduleDashsalesDashctiDashspaceLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Fn::GetAtt": [
-                "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashctiDashspaceLambdaVersionpzniyuLOagmqJ5luF1XbgVGxS69EmxoUs3NG55T9s"
-              ]
-            }
-          },
-          "ScheduleDashsalesDashctiDashstoreLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Fn::GetAtt": [
-                "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashctiDashstoreLambdaVersionD0URjBaoN4VvapOkq5CAT08Lgq08ekPrmoT52489AE"
-              ]
-            }
-          },
-          "ScheduleDashsalesDashctiDashtenantLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Fn::GetAtt": [
-                "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashctiDashtenantLambdaVersionYGbwZz1LON5BJS6O2oxYxWqzzJdwsQnTBqRID5FNQ"
+                "Outputs.GfDashgiftcardDashinfoLambdaVersiondoq06TIZRYCmK795GAKKfZRxGfTQekDU3NegiwfWcc"
               ]
             }
           },
@@ -5317,7 +5412,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashctiDashunitLambdaVersionDPI54T0LEn14HQncN2IJll9Sl6jbtcsjzEGsxTfts"
+                "Outputs.ScheduleDashsalesDashctiDashunitLambdaVersionNiFXflx8J7qylKG9e74AlyG5JbIguKyHH6Wer9Clzk"
               ]
             }
           },
@@ -5326,7 +5421,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.ScheduleDashsalesDashrcisDashcategoryLambdaVersionJpINn9Cor4Jk2CT4PRINj1rAxYxibKJyQ2pA8UbQ"
+                "Outputs.ScheduleDashsalesDashrcisDashcategoryLambdaVersionMect0M4rfRYjw3OU19iMcUWWBc5LwocmpS2J6ajg"
               ]
             }
           },
@@ -5335,7 +5430,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashctiDashcategoryLambdaVersion7dGegnP6OUBuWxKuUvdkpq9DYB3gv5wbc1baI6CKtxU"
+                "Outputs.BackfillDashsalesDashctiDashcategoryLambdaVersionPUak6f9OQpecBVvB7aOXkqB9pQIFH2gvtTlGki626TA"
               ]
             }
           },
@@ -5344,7 +5439,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashctiDashprojectLambdaVersionqHh04KqJEJrbNnkfX9kPbtkPayc3sIsdfgR04M3qyw"
+                "Outputs.BackfillDashsalesDashctiDashprojectLambdaVersion90RnRWmY0F8AJOghaSsFIdwLL0Vh3pbQUaDh9YRaY"
               ]
             }
           },
@@ -5353,7 +5448,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashctiDashspaceLambdaVersionX4FOjaV1v4sgMJejXaTYvLbD2rP55UcK7pqjtvjc"
+                "Outputs.BackfillDashsalesDashctiDashspaceLambdaVersioneCzmSfqSexgs4jZzwHWrr3Ht6xtY23aMM3w8LakCRJM"
               ]
             }
           },
@@ -5362,7 +5457,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashctiDashstoreLambdaVersionAW8gveum3Sq5KwO0T5nsH24zMjxrn2ycvBMZuTB40"
+                "Outputs.BackfillDashsalesDashctiDashstoreLambdaVersionPMd2ECkyAU3dImUHLNsQO03UmYtPpYFjPgqRNUhpQT8"
               ]
             }
           },
@@ -5371,7 +5466,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashctiDashtenantLambdaVersioncrvxEDfZm9DdVSOI549Qk0oGJ0rYEqYIZ0IlXANhGdo"
+                "Outputs.BackfillDashsalesDashctiDashtenantLambdaVersionQBGHD2eCY8G5puZplNRD2OT0nFr59Axei2WgdoN2Uc"
               ]
             }
           },
@@ -5380,7 +5475,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashctiDashunitLambdaVersionlbGERySaRtaEeuOaoOmIrrZuxRHTC6C2fpYg9HG8"
+                "Outputs.BackfillDashsalesDashctiDashunitLambdaVersion3bJ7UrVo5gZtRd9KJbYAtDwdAQMDvAT20rOdzskN0U"
               ]
             }
           },
@@ -5389,7 +5484,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.BackfillDashsalesDashrcisDashcategoryLambdaVersions4H1qJupcHYQ0dUOaLv0tqYV3MauSiDtp4nH3lA"
+                "Outputs.BackfillDashsalesDashrcisDashcategoryLambdaVersion3xIGeudRvBqs8O8jFQdTQlNlQgdClT6tbiOK9YK6M"
               ]
             }
           },
@@ -5398,7 +5493,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.MerakiDashdevicesLambdaVersioniQKK9fys7WnrjbKWwGP4aikDiVdEnmelOeYArCOJZtM"
+                "Outputs.MerakiDashdevicesLambdaVersionSh2ciN2OtgbkgOsbpvFpd2c4TAsqCB6n3zlB2LLeEI"
               ]
             }
           },
@@ -5407,7 +5502,7 @@
             "Value": {
               "Fn::GetAtt": [
                 "VersionsNestedStack",
-                "Outputs.MerakiDashdevicesDashstatusLambdaVersionkLmuRuqAWQ1HiBJWULJ0tRDcCM9XSwBHLkakqwCboo"
+                "Outputs.MerakiDashdevicesDashstatusLambdaVersionQUyNStZFhHAG3IOytljbppmOFLxCnnLQTXAQNCA8"
               ]
             }
           },
@@ -5572,7 +5667,7 @@
             "http": "GET v1/aislelabs/dailyTraffic"
           },
           {
-            "schedule": "cron(30 13 * * ? *)"
+            "schedule": "cron(0 0 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-traffic_refresh_8",
@@ -5596,7 +5691,7 @@
             "http": "GET v1/aislelabs/dailyTraffic"
           },
           {
-            "schedule": "cron(0 14 * * ? *)"
+            "schedule": "cron(30 00 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-traffic_refresh_15",
@@ -5620,7 +5715,7 @@
             "http": "GET v1/aislelabs/dailyTraffic"
           },
           {
-            "schedule": "cron(30 14 * * ? *)"
+            "schedule": "cron(00 1 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-traffic_refresh_22",
@@ -5644,7 +5739,7 @@
             "http": "GET v1/aislelabs/dailyTraffic"
           },
           {
-            "schedule": "cron(00 15 * * ? *)"
+            "schedule": "cron(30 1 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-traffic_refresh_29",
@@ -5716,7 +5811,7 @@
             "http": "GET v1/aislelabs/dailyDwell"
           },
           {
-            "schedule": "cron(30 15 * * ? *)"
+            "schedule": "cron(00 2 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-dwell_refresh_8",
@@ -5740,7 +5835,7 @@
             "http": "GET v1/aislelabs/dailyDwell"
           },
           {
-            "schedule": "cron(0 16 * * ? *)"
+            "schedule": "cron(30 2 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-dwell_refresh_15",
@@ -5764,7 +5859,7 @@
             "http": "GET v1/aislelabs/dailyDwell"
           },
           {
-            "schedule": "cron(30 16 * * ? *)"
+            "schedule": "cron(00 3 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-dwell_refresh_22",
@@ -5788,32 +5883,10 @@
             "http": "GET v1/aislelabs/dailyDwell"
           },
           {
-            "schedule": "cron(0 17 * * ? *)"
+            "schedule": "cron(30 3 * * ? *)"
           }
         ],
         "name": "cf-domo-loader-dev-al-daily-dwell_refresh_29",
-        "package": {},
-        "memory": 1024,
-        "runtime": "nodejs10.x",
-        "vpc": {}
-      },
-      "al-frequency": {
-        "environment": {
-          "apikey": "efc5ffe26768428e101139aece9af70b",
-          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8",
-          "ndays": 30
-        },
-        "handler": "scheduling/aislelabs_frequency.get",
-        "alarms": [
-          "functionErrors"
-        ],
-        "timeout": 30,
-        "events": [
-          {
-            "http": "GET v1/aislelabs/frequency"
-          }
-        ],
-        "name": "cf-domo-loader-dev-al-frequency",
         "package": {},
         "memory": 1024,
         "runtime": "nodejs10.x",
@@ -5838,6 +5911,102 @@
           }
         ],
         "name": "cf-domo-loader-dev-al-visitor-flow",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-visitor-flow_refresh_8": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_visitor_flow.get_refresh_8",
+        "alarms": [
+          "functionErrors"
+        ],
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/visitorFlow"
+          },
+          {
+            "schedule": "cron(00 4 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-visitor-flow_refresh_8",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-visitor-flow_refresh_15": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_visitor_flow.get_refresh_15",
+        "alarms": [
+          "functionErrors"
+        ],
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/visitorFlow"
+          },
+          {
+            "schedule": "cron(30 4 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-visitor-flow_refresh_15",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-visitor-flow_refresh_22": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_visitor_flow.get_refresh_22",
+        "alarms": [
+          "functionErrors"
+        ],
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/visitorFlow"
+          },
+          {
+            "schedule": "cron(00 5 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-visitor-flow_refresh_22",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-visitor-flow_refresh_29": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_visitor_flow.get_refresh_29",
+        "alarms": [
+          "functionErrors"
+        ],
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/visitorFlow"
+          },
+          {
+            "schedule": "cron(30 5 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-visitor-flow_refresh_29",
         "package": {},
         "memory": 1024,
         "runtime": "nodejs10.x",
@@ -5888,6 +6057,90 @@
         "runtime": "nodejs10.x",
         "vpc": {}
       },
+      "al-socialwifi_refresh_8": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_socialwifi.get_refresh_8",
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/socialwifi"
+          },
+          {
+            "schedule": "cron(00 13 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-socialwifi_refresh_8",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-socialwifi_refresh_15": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_socialwifi.get_refresh_15",
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/socialwifi"
+          },
+          {
+            "schedule": "cron(00 14 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-socialwifi_refresh_15",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-socialwifi_refresh_22": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_socialwifi.get_refresh_22",
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/socialwifi"
+          },
+          {
+            "schedule": "cron(00 15 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-socialwifi_refresh_22",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
+      "al-socialwifi_refresh_29": {
+        "environment": {
+          "apikey": "efc5ffe26768428e101139aece9af70b",
+          "apikey2": "e0eaeeefec462beef5e64f34bfbd21b8"
+        },
+        "handler": "scheduling/aislelabs_socialwifi.get_refresh_29",
+        "timeout": 30,
+        "events": [
+          {
+            "http": "GET v1/aislelabs/socialwifi"
+          },
+          {
+            "schedule": "cron(00 16 * * ? *)"
+          }
+        ],
+        "name": "cf-domo-loader-dev-al-socialwifi_refresh_29",
+        "package": {},
+        "memory": 1024,
+        "runtime": "nodejs10.x",
+        "vpc": {}
+      },
       "gf-giftcard-transaction": {
         "handler": "scheduling/s3_gift_cards.getGiftCardTransaction",
         "timeout": 30,
@@ -5917,76 +6170,6 @@
           }
         ],
         "name": "cf-domo-loader-dev-gf-giftcard-info",
-        "package": {},
-        "memory": 1024,
-        "runtime": "nodejs10.x",
-        "vpc": {}
-      },
-      "schedule-sales-cti-category": {
-        "handler": "scheduling/s3_sales.schedule_cti_category",
-        "timeout": 30,
-        "events": [
-          {
-            "http": "GET v1/schedule_sales_cti_category"
-          }
-        ],
-        "name": "cf-domo-loader-dev-schedule-sales-cti-category",
-        "package": {},
-        "memory": 1024,
-        "runtime": "nodejs10.x",
-        "vpc": {}
-      },
-      "schedule-sales-cti-project": {
-        "handler": "scheduling/s3_sales.schedule_cti_project",
-        "timeout": 30,
-        "events": [
-          {
-            "http": "GET v1/schedule_sales_cti_project"
-          }
-        ],
-        "name": "cf-domo-loader-dev-schedule-sales-cti-project",
-        "package": {},
-        "memory": 1024,
-        "runtime": "nodejs10.x",
-        "vpc": {}
-      },
-      "schedule-sales-cti-space": {
-        "handler": "scheduling/s3_sales.schedule_cti_space",
-        "timeout": 30,
-        "events": [
-          {
-            "http": "GET v1/schedule_sales_cti_space"
-          }
-        ],
-        "name": "cf-domo-loader-dev-schedule-sales-cti-space",
-        "package": {},
-        "memory": 1024,
-        "runtime": "nodejs10.x",
-        "vpc": {}
-      },
-      "schedule-sales-cti-store": {
-        "handler": "scheduling/s3_sales.schedule_cti_store",
-        "timeout": 30,
-        "events": [
-          {
-            "http": "GET v1/schedule_sales_cti_store"
-          }
-        ],
-        "name": "cf-domo-loader-dev-schedule-sales-cti-store",
-        "package": {},
-        "memory": 1024,
-        "runtime": "nodejs10.x",
-        "vpc": {}
-      },
-      "schedule-sales-cti-tenant": {
-        "handler": "scheduling/s3_sales.schedule_cti_tenant",
-        "timeout": 30,
-        "events": [
-          {
-            "http": "GET v1/schedule_sales_cti_tenant"
-          }
-        ],
-        "name": "cf-domo-loader-dev-schedule-sales-cti-tenant",
         "package": {},
         "memory": 1024,
         "runtime": "nodejs10.x",
@@ -6224,10 +6407,10 @@
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "artifact": "/home/ec2-user/environment/cf-slalom-email-opt-in/lambda/traffic/cf-domo-loader-test-al-daily-traffic/.serverless/cf-domo-loader.zip"
+    "artifact": "/home/ec2-user/environment/CF-Slalom-API-Refresh/traffic/lambda/cf-domo-loader-test-al-daily-traffic/.serverless/cf-domo-loader.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/cf-domo-loader/dev/1565187872015-2019-08-07T14:24:32.015Z",
+    "artifactDirectoryName": "serverless/cf-domo-loader/dev/1565742808499-2019-08-14T00:33:28.499Z",
     "artifact": "cf-domo-loader.zip"
   }
 }

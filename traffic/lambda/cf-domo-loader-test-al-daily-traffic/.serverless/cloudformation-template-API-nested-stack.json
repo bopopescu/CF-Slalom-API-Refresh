@@ -71,19 +71,6 @@
       },
       "DependsOn": []
     },
-    "ApiGatewayResourceV1AislelabsFrequency": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceV1Aislelabs"
-        },
-        "PathPart": "frequency",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      },
-      "DependsOn": []
-    },
     "ApiGatewayResourceV1AislelabsMonthlytraffic": {
       "Type": "AWS::ApiGateway::Resource",
       "Properties": {
@@ -292,71 +279,6 @@
       },
       "DependsOn": []
     },
-    "ApiGatewayResourceV1Schedulesalescticategory": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceV1"
-        },
-        "PathPart": "schedule_sales_cti_category",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      },
-      "DependsOn": []
-    },
-    "ApiGatewayResourceV1Schedulesalesctiproject": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceV1"
-        },
-        "PathPart": "schedule_sales_cti_project",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      },
-      "DependsOn": []
-    },
-    "ApiGatewayResourceV1Schedulesalesctispace": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceV1"
-        },
-        "PathPart": "schedule_sales_cti_space",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      },
-      "DependsOn": []
-    },
-    "ApiGatewayResourceV1Schedulesalesctistore": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceV1"
-        },
-        "PathPart": "schedule_sales_cti_store",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      },
-      "DependsOn": []
-    },
-    "ApiGatewayResourceV1Schedulesalesctitenant": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceV1"
-        },
-        "PathPart": "schedule_sales_cti_tenant",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      },
-      "DependsOn": []
-    },
     "ApiGatewayResourceV1Schedulesalesctiunit": {
       "Type": "AWS::ApiGateway::Resource",
       "Properties": {
@@ -417,11 +339,6 @@
         "Ref": "ApiGatewayResourceV1AislelabsDailydwell"
       }
     },
-    "ApiGatewayResourceV1AislelabsFrequency": {
-      "Value": {
-        "Ref": "ApiGatewayResourceV1AislelabsFrequency"
-      }
-    },
     "ApiGatewayResourceV1AislelabsVisitorflow": {
       "Value": {
         "Ref": "ApiGatewayResourceV1AislelabsVisitorflow"
@@ -445,31 +362,6 @@
     "ApiGatewayResourceV1GiftcardGiftcardinfo": {
       "Value": {
         "Ref": "ApiGatewayResourceV1GiftcardGiftcardinfo"
-      }
-    },
-    "ApiGatewayResourceV1Schedulesalescticategory": {
-      "Value": {
-        "Ref": "ApiGatewayResourceV1Schedulesalescticategory"
-      }
-    },
-    "ApiGatewayResourceV1Schedulesalesctiproject": {
-      "Value": {
-        "Ref": "ApiGatewayResourceV1Schedulesalesctiproject"
-      }
-    },
-    "ApiGatewayResourceV1Schedulesalesctispace": {
-      "Value": {
-        "Ref": "ApiGatewayResourceV1Schedulesalesctispace"
-      }
-    },
-    "ApiGatewayResourceV1Schedulesalesctistore": {
-      "Value": {
-        "Ref": "ApiGatewayResourceV1Schedulesalesctistore"
-      }
-    },
-    "ApiGatewayResourceV1Schedulesalesctitenant": {
-      "Value": {
-        "Ref": "ApiGatewayResourceV1Schedulesalesctitenant"
       }
     },
     "ApiGatewayResourceV1Schedulesalesctiunit": {
