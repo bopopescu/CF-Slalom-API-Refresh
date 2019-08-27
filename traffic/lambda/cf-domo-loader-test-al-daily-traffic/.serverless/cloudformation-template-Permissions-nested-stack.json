@@ -2,12 +2,6 @@
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "PermissionsNestedStack nested stack",
   "Parameters": {
-    "AlDashdailyDashtrafficEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "AlDashdailyDashtrafficLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
     "AlDashdailyDashtrafficUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter": {
       "Type": "String"
     },
@@ -30,18 +24,6 @@
       "Type": "String"
     },
     "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "AlDashmonthlyDashtrafficEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "AlDashmonthlyDashtrafficLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "AlDashdailyDashdwellEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "AlDashdailyDashdwellLambdaFunctionArnParameter": {
       "Type": "String"
     },
     "AlDashdailyDashdwellUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter": {
@@ -68,12 +50,6 @@
     "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionArnParameter": {
       "Type": "String"
     },
-    "AlDashvisitorDashflowEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "AlDashvisitorDashflowLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
     "AlDashvisitorDashflowUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter": {
       "Type": "String"
     },
@@ -96,18 +72,6 @@
       "Type": "String"
     },
     "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "AlDashcrossvisitorEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "AlDashcrossvisitorLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "AlDashsocialwifiEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "AlDashsocialwifiLambdaFunctionArnParameter": {
       "Type": "String"
     },
     "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter": {
@@ -134,430 +98,21 @@
     "AlDashsocialwifiUnderscorerefreshUnderscore29LambdaFunctionArnParameter": {
       "Type": "String"
     },
-    "GfDashgiftcardDashtransactionEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "GfDashgiftcardDashtransactionLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "GfDashgiftcardDashinfoEventsRuleSchedule1ArnParameter": {
-      "Type": "String"
-    },
-    "GfDashgiftcardDashinfoLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
     "ApiGatewayRestApiParameter": {
-      "Type": "String"
-    },
-    "ScheduleDashsalesDashctiDashunitLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "ScheduleDashsalesDashrcisDashcategoryLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashctiDashcategoryLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashctiDashprojectLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashctiDashspaceLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashctiDashstoreLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashctiDashtenantLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashctiDashunitLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "BackfillDashsalesDashrcisDashcategoryLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "MerakiDashdevicesLambdaFunctionArnParameter": {
-      "Type": "String"
-    },
-    "MerakiDashdevicesDashstatusLambdaFunctionArnParameter": {
       "Type": "String"
     }
   },
   "Resources": {
-    "AlDashcrossvisitorLambdaPermissionApiGateway": {
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
-          "Ref": "AlDashcrossvisitorLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashcrossvisitorLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashcrossvisitorLambdaFunctionArnParameter"
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
         },
         "Action": "lambda:InvokeFunction",
         "Principal": "events.amazonaws.com",
         "SourceArn": {
-          "Ref": "AlDashcrossvisitorEventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashdailyDashdwellEventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15EventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22EventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29EventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashtrafficLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashtrafficLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashdailyDashtrafficEventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter"
         }
       },
       "DependsOn": []
@@ -576,41 +131,6 @@
       },
       "DependsOn": []
     },
-    "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
     "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
@@ -621,41 +141,6 @@
         "Principal": "events.amazonaws.com",
         "SourceArn": {
           "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore22EventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
         }
       },
       "DependsOn": []
@@ -674,730 +159,58 @@
       },
       "DependsOn": []
     },
-    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaPermissionApiGateway": {
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
         },
         "Action": "lambda:InvokeFunction",
         "Principal": "events.amazonaws.com",
         "SourceArn": {
-          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter"
         }
       },
       "DependsOn": []
     },
-    "AlDashmonthlyDashtrafficLambdaPermissionApiGateway": {
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
-          "Ref": "AlDashmonthlyDashtrafficLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashmonthlyDashtrafficLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashmonthlyDashtrafficLambdaFunctionArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionArnParameter"
         },
         "Action": "lambda:InvokeFunction",
         "Principal": "events.amazonaws.com",
         "SourceArn": {
-          "Ref": "AlDashmonthlyDashtrafficEventsRuleSchedule1ArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15EventsRuleSchedule1ArnParameter"
         }
       },
       "DependsOn": []
     },
-    "AlDashsocialwifiLambdaPermissionApiGateway": {
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
-          "Ref": "AlDashsocialwifiLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashsocialwifiLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashsocialwifiLambdaFunctionArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionArnParameter"
         },
         "Action": "lambda:InvokeFunction",
         "Principal": "events.amazonaws.com",
         "SourceArn": {
-          "Ref": "AlDashsocialwifiEventsRuleSchedule1ArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22EventsRuleSchedule1ArnParameter"
         }
       },
       "DependsOn": []
     },
-    "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaPermissionApiGateway": {
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
-          "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
         },
         "Action": "lambda:InvokeFunction",
         "Principal": "events.amazonaws.com",
         "SourceArn": {
-          "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashvisitorDashflowLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashvisitorDashflowLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "AlDashvisitorDashflowLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AlDashvisitorDashflowLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "AlDashvisitorDashflowEventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashctiDashcategoryLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashctiDashcategoryLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashctiDashprojectLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashctiDashprojectLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashctiDashspaceLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashctiDashspaceLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashctiDashstoreLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashctiDashstoreLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashctiDashtenantLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashctiDashtenantLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashctiDashunitLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashctiDashunitLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "BackfillDashsalesDashrcisDashcategoryLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "BackfillDashsalesDashrcisDashcategoryLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "GfDashgiftcardDashinfoLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "GfDashgiftcardDashinfoLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "GfDashgiftcardDashinfoLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "GfDashgiftcardDashinfoLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "GfDashgiftcardDashinfoEventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "GfDashgiftcardDashtransactionLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "GfDashgiftcardDashtransactionLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "GfDashgiftcardDashtransactionLambdaPermissionEventsRuleSchedule1": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "GfDashgiftcardDashtransactionLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "events.amazonaws.com",
-        "SourceArn": {
-          "Ref": "GfDashgiftcardDashtransactionEventsRuleSchedule1ArnParameter"
-        }
-      },
-      "DependsOn": []
-    },
-    "MerakiDashdevicesDashstatusLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "MerakiDashdevicesDashstatusLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "MerakiDashdevicesLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "MerakiDashdevicesLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "ScheduleDashsalesDashctiDashunitLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "ScheduleDashsalesDashctiDashunitLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      },
-      "DependsOn": []
-    },
-    "ScheduleDashsalesDashrcisDashcategoryLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "ScheduleDashsalesDashrcisDashcategoryLambdaFunctionArnParameter"
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApiParameter"
-              },
-              "/*/*"
-            ]
-          ]
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29EventsRuleSchedule1ArnParameter"
         }
       },
       "DependsOn": []
@@ -1458,6 +271,20 @@
       },
       "DependsOn": []
     },
+    "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaPermissionEventsRuleSchedule1": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8EventsRuleSchedule1ArnParameter"
+        }
+      },
+      "DependsOn": []
+    },
     "AlDashsocialwifiUnderscorerefreshUnderscore15LambdaPermissionEventsRuleSchedule1": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
@@ -1496,6 +323,286 @@
         "Principal": "events.amazonaws.com",
         "SourceArn": {
           "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore29EventsRuleSchedule1ArnParameter"
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore15LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore22LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashtrafficUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore15LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore22LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashdailyDashdwellUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
         }
       },
       "DependsOn": []
@@ -1610,6 +717,41 @@
       "Properties": {
         "FunctionName": {
           "Ref": "AlDashvisitorDashflowUnderscorerefreshUnderscore29LambdaFunctionArnParameter"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApiParameter"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "DependsOn": []
+    },
+    "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AlDashsocialwifiUnderscorerefreshUnderscore8LambdaFunctionArnParameter"
         },
         "Action": "lambda:InvokeFunction",
         "Principal": "apigateway.amazonaws.com",

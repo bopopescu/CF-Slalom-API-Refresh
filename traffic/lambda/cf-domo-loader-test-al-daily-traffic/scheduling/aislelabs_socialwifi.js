@@ -67,6 +67,42 @@ exports.get = (event, context, callback) => {
     }
 };
 
+
+
+/*
+exports.get = (event, context, callback) => {
+    log.log("Socialwifi request" );
+    if (event.queryStringParameters &&
+        event.queryStringParameters.start &&
+        event.queryStringParameters.end) {
+        log.log("Processing backfilling");
+        const currentDay = moment(event.queryStringParameters.start).hour(11);
+        const lastDay = moment(event.queryStringParameters.end);
+        let records = [];
+
+        while (!currentDay.isSame(lastDay, 'day')) {
+            records = processDay(currentDay, callback, records, true, false);
+            currentDay.add(1, 'days');
+        }
+        processDay(currentDay, callback, records, true, true);
+    } else {
+        log.log("Processing current day only" );
+        const currentDay = moment().subtract(1, 'days').hour(11);
+        const currentDay_8 = moment().subtract(8, 'days').hour(11);
+        const currentDay_15 = moment().subtract(15, 'days').hour(11);
+        const currentDay_22 = moment().subtract(22, 'days').hour(11);
+        const currentDay_29 = moment().subtract(29, 'days').hour(11);
+        processDay(currentDay, callback);
+        processDay(currentDay_8, callback);
+        processDay(currentDay_15, callback);
+        processDay(currentDay_22, callback);
+        processDay(currentDay_29, callback);
+    }
+};
+
+*/
+
+
 exports.get_refresh_8 = (event, context, callback) => {
     log.log("Socialwifi request" );
     if (event.queryStringParameters &&
@@ -156,3 +192,5 @@ exports.get_refresh_29 = (event, context, callback) => {
         processDay(currentDay, callback);
     }
 };
+
+

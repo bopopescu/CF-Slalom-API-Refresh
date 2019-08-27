@@ -319,7 +319,6 @@ exports.getDailyTraffic_refresh_29 = (event, context, callback) => {
 
 
 
-
 exports.getMonthlyTraffic = (event, context, callback) => {
   log.log("Monthly traffic request");
   if (event.queryStringParameters && event.queryStringParameters.year && event.queryStringParameters.month) {

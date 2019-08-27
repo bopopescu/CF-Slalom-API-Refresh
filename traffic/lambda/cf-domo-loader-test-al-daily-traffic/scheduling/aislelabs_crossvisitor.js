@@ -71,3 +71,5 @@ exports.get = (event, context, callback) => {
         processDay(currentDay, callback);
     }
 };
+
+
